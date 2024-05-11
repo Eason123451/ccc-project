@@ -1,0 +1,52 @@
+include:
+- ./functions/aharvester.py
+kind: ArchiveUploadSpec
+name: functions-aharvester-py-2l0Q
+
+---
+apiVersion: fission.io/v1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: aharvester-98ae6471-2102-40ee-9b94-3ce76ddb8a4d
+spec:
+  deployment:
+    checksum: {}
+    type: url
+    url: archive://functions-aharvester-py-2l0Q
+  environment:
+    name: python
+    namespace: ""
+  source:
+    checksum: {}
+status:
+  buildstatus: none
+  lastUpdateTimestamp: "2024-05-09T17:31:57Z"
+
+---
+apiVersion: fission.io/v1
+kind: Function
+metadata:
+  creationTimestamp: null
+  name: aharvester
+spec:
+  InvokeStrategy:
+    ExecutionStrategy:
+      ExecutorType: poolmgr
+      MaxScale: 0
+      MinScale: 0
+      SpecializationTimeout: 120
+      TargetCPUPercent: 0
+    StrategyType: execution
+  concurrency: 500
+  environment:
+    name: python
+    namespace: ""
+  functionTimeout: 60
+  idletimeout: 120
+  package:
+    packageref:
+      name: aharvester-98ae6471-2102-40ee-9b94-3ce76ddb8a4d
+      namespace: ""
+  requestsPerPod: 1
+  resources: {}
