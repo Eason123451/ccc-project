@@ -1,13 +1,13 @@
 module.exports = async function (context) {
-  console.log(`Processed an air quality observation`);
+  console.log(`Processed an mastodon data`);
   return {
     status: 200,
-    body: JSON.stringify (context.request.body.features.map ((feat) => {
+    body: JSON.stringify (context.request.body.map ((toot) => {
         return [{
-          id: feat.properties.id,
-          created_at: feat.properties.created_at,
-          content: feat.properties.content,
-          account: feat.properties.account,
+          id: toot.id,
+          created_at: toot.created_at,
+          content: toot.content,
+          account: toot.account,
         }];
       }
     ))

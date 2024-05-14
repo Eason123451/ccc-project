@@ -25,13 +25,13 @@ def main():
     
     for data in data_set:
 
-        try:
-            # change the UTC time to Local time
-            converted_time = data['created_at'].astimezone(local_zone).isoformat()
-            data['created_at'] = converted_time
-            current_app.logger.info(f'change the time to local time')
-        except Exception as e:
-            return json.dumps({"error": str(e)})
+        # try:
+        #     # change the UTC time to Local time
+        #     converted_time = data['created_at'].astimezone(local_zone).isoformat()
+        #     data['created_at'] = converted_time
+        #     current_app.logger.info(f'change the time to local time')
+        # except Exception as e:
+        #     return json.dumps({"error": str(e)})
         
         try:
             # extract the text from html for each publish
