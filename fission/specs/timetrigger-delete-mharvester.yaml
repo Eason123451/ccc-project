@@ -1,0 +1,11 @@
+apiVersion: fission.io/v1
+kind: TimeTrigger
+metadata:
+  creationTimestamp: null
+  name: delete-mharvester
+spec:
+  cron: 0 0 * * *
+  functionref:
+    functionweights: null
+    name: deletemharvester
+    type: name
