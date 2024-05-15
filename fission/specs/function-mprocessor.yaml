@@ -1,19 +1,19 @@
 include:
 - ./functions/mprocessor.js
 kind: ArchiveUploadSpec
-name: functions-mprocessor-js-qZdJ
+name: functions-mprocessor-js-ywLm
 
 ---
 apiVersion: fission.io/v1
 kind: Package
 metadata:
   creationTimestamp: null
-  name: mprocessor-0d26b03e-39f2-41fe-8136-061c8e18aeeb
+  name: mprocessor-bf60590c-eb15-4170-955a-796830745f1c
 spec:
   deployment:
     checksum: {}
     type: url
-    url: archive://functions-mprocessor-js-qZdJ
+    url: archive://functions-mprocessor-js-ywLm
   environment:
     name: nodejs
     namespace: ""
@@ -21,7 +21,7 @@ spec:
     checksum: {}
 status:
   buildstatus: none
-  lastUpdateTimestamp: "2024-05-14T18:10:24Z"
+  lastUpdateTimestamp: "2024-05-15T03:39:28Z"
 
 ---
 apiVersion: fission.io/v1
@@ -46,7 +46,7 @@ spec:
   idletimeout: 120
   package:
     packageref:
-      name: mprocessor-0d26b03e-39f2-41fe-8136-061c8e18aeeb
+      name: mprocessor-bf60590c-eb15-4170-955a-796830745f1c
       namespace: ""
   requestsPerPod: 1
   resources: {}
