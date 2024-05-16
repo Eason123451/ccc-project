@@ -1,0 +1,396 @@
+﻿"Local Government Area: Descending",filters,"Sum of Offence Count"
+Melbourne,2019,"28,448"
+Melbourne,2020,"28,696"
+Melbourne,2021,"30,834"
+Melbourne,2022,"28,118"
+Melbourne,2023,"29,451"
+Casey,2019,"22,532"
+Casey,2020,"23,188"
+Casey,2021,"19,786"
+Casey,2022,"20,949"
+Casey,2023,"23,432"
+"Greater Geelong",2019,"21,705"
+"Greater Geelong",2020,"22,961"
+"Greater Geelong",2021,"19,999"
+"Greater Geelong",2022,"19,875"
+"Greater Geelong",2023,"22,601"
+Hume,2019,"21,416"
+Hume,2020,"21,992"
+Hume,2021,"17,888"
+Hume,2022,"18,186"
+Hume,2023,"18,342"
+Brimbank,2019,"19,791"
+Brimbank,2020,"20,216"
+Brimbank,2021,"16,994"
+Brimbank,2022,"16,727"
+Brimbank,2023,"17,044"
+"Greater Dandenong",2019,"18,916"
+"Greater Dandenong",2020,"18,133"
+"Greater Dandenong",2021,"16,551"
+"Greater Dandenong",2022,"17,016"
+"Greater Dandenong",2023,"18,774"
+Wyndham,2019,"16,755"
+Wyndham,2020,"18,263"
+Wyndham,2021,"15,918"
+Wyndham,2022,"17,648"
+Wyndham,2023,"18,574"
+Whittlesea,2019,"16,472"
+Whittlesea,2020,"16,792"
+Whittlesea,2021,"13,143"
+Whittlesea,2022,"12,477"
+Whittlesea,2023,"13,199"
+Frankston,2019,"14,921"
+Frankston,2020,"14,784"
+Frankston,2021,"11,748"
+Frankston,2022,"12,737"
+Frankston,2023,"14,953"
+Darebin,2019,"14,523"
+Darebin,2020,"15,737"
+Darebin,2021,"12,641"
+Darebin,2022,"12,671"
+Darebin,2023,"13,715"
+"Merri-bek",2019,"14,368"
+"Merri-bek",2020,"13,768"
+"Merri-bek",2021,"11,638"
+"Merri-bek",2022,"11,926"
+"Merri-bek",2023,"12,750"
+Yarra,2019,"13,504"
+Yarra,2020,"14,202"
+Yarra,2021,"12,150"
+Yarra,2022,"11,232"
+Yarra,2023,"12,835"
+Latrobe,2019,"14,004"
+Latrobe,2020,"13,628"
+Latrobe,2021,"11,339"
+Latrobe,2022,"11,186"
+Latrobe,2023,"11,863"
+"Port Phillip",2019,"12,549"
+"Port Phillip",2020,"13,574"
+"Port Phillip",2021,"12,329"
+"Port Phillip",2022,"12,598"
+"Port Phillip",2023,"12,727"
+Melton,2019,"12,612"
+Melton,2020,"14,353"
+Melton,2021,"12,101"
+Melton,2022,"12,036"
+Melton,2023,"12,862"
+Monash,2019,"11,689"
+Monash,2020,"12,826"
+Monash,2021,"11,482"
+Monash,2022,"11,782"
+Monash,2023,"13,629"
+Kingston,2019,"12,107"
+Kingston,2020,"11,631"
+Kingston,2021,"9,603"
+Kingston,2022,"10,694"
+Kingston,2023,"12,594"
+Ballarat,2019,"11,742"
+Ballarat,2020,"9,764"
+Ballarat,2021,"10,139"
+Ballarat,2022,"10,953"
+Ballarat,2023,"11,715"
+Stonnington,2019,"11,752"
+Stonnington,2020,"11,589"
+Stonnington,2021,"10,602"
+Stonnington,2022,"11,314"
+Stonnington,2023,"11,214"
+Knox,2019,"11,923"
+Knox,2020,"11,986"
+Knox,2021,"10,043"
+Knox,2022,"9,133"
+Knox,2023,"10,162"
+"Mornington Peninsula",2019,"11,211"
+"Mornington Peninsula",2020,"11,331"
+"Mornington Peninsula",2021,"9,011"
+"Mornington Peninsula",2022,"9,293"
+"Mornington Peninsula",2023,"9,928"
+"Greater Bendigo",2019,"11,453"
+"Greater Bendigo",2020,"11,062"
+"Greater Bendigo",2021,"10,464"
+"Greater Bendigo",2022,"10,467"
+"Greater Bendigo",2023,"11,276"
+Banyule,2019,"9,514"
+Banyule,2020,"9,456"
+Banyule,2021,"7,351"
+Banyule,2022,"7,682"
+Banyule,2023,"8,072"
+Maribyrnong,2019,"8,901"
+Maribyrnong,2020,"9,156"
+Maribyrnong,2021,"8,622"
+Maribyrnong,2022,"8,666"
+Maribyrnong,2023,"9,713"
+"Moonee Valley",2019,"8,280"
+"Moonee Valley",2020,"8,403"
+"Moonee Valley",2021,"7,888"
+"Moonee Valley",2022,"7,569"
+"Moonee Valley",2023,"8,020"
+Whitehorse,2019,"9,222"
+Whitehorse,2020,"9,346"
+Whitehorse,2021,"7,603"
+Whitehorse,2022,"7,933"
+Whitehorse,2023,"9,916"
+Maroondah,2019,"8,163"
+Maroondah,2020,"8,010"
+Maroondah,2021,"7,454"
+Maroondah,2022,"7,525"
+Maroondah,2023,"7,666"
+"Greater Shepparton",2019,"8,836"
+"Greater Shepparton",2020,"8,034"
+"Greater Shepparton",2021,"7,743"
+"Greater Shepparton",2022,"7,726"
+"Greater Shepparton",2023,"7,263"
+"Yarra Ranges",2019,"9,178"
+"Yarra Ranges",2020,"8,759"
+"Yarra Ranges",2021,"7,610"
+"Yarra Ranges",2022,"6,973"
+"Yarra Ranges",2023,"7,113"
+Boroondara,2019,"8,139"
+Boroondara,2020,"8,012"
+Boroondara,2021,"7,448"
+Boroondara,2022,"7,079"
+Boroondara,2023,"7,868"
+"Glen Eira",2019,"7,388"
+"Glen Eira",2020,"7,867"
+"Glen Eira",2021,"6,840"
+"Glen Eira",2022,"6,934"
+"Glen Eira",2023,"7,662"
+Mildura,2019,"7,425"
+Mildura,2020,"6,572"
+Mildura,2021,"6,594"
+Mildura,2022,"7,369"
+Mildura,2023,"8,071"
+Cardinia,2019,"6,638"
+Cardinia,2020,"7,602"
+Cardinia,2021,"6,420"
+Cardinia,2022,"6,159"
+Cardinia,2023,"7,108"
+"Hobsons Bay",2019,"6,225"
+"Hobsons Bay",2020,"5,825"
+"Hobsons Bay",2021,"5,832"
+"Hobsons Bay",2022,"5,935"
+"Hobsons Bay",2023,"5,720"
+Bayside,2019,"5,098"
+Bayside,2020,"5,586"
+Bayside,2021,"4,298"
+Bayside,2022,"4,954"
+Bayside,2023,"5,605"
+"East Gippsland",2019,"4,895"
+"East Gippsland",2020,"5,147"
+"East Gippsland",2021,"4,920"
+"East Gippsland",2022,"4,877"
+"East Gippsland",2023,"5,279"
+Manningham,2019,"5,138"
+Manningham,2020,"4,837"
+Manningham,2021,"4,012"
+Manningham,2022,"3,811"
+Manningham,2023,"4,817"
+Wellington,2019,"4,589"
+Wellington,2020,"4,843"
+Wellington,2021,"4,386"
+Wellington,2022,"4,481"
+Wellington,2023,"4,681"
+"Baw Baw",2019,"4,761"
+"Baw Baw",2020,"5,083"
+"Baw Baw",2021,"4,432"
+"Baw Baw",2022,"4,139"
+"Baw Baw",2023,"4,496"
+Mitchell,2019,"4,819"
+Mitchell,2020,"5,335"
+Mitchell,2021,"3,674"
+Mitchell,2022,"3,868"
+Mitchell,2023,"4,163"
+Campaspe,2019,"3,962"
+Campaspe,2020,"3,785"
+Campaspe,2021,"3,285"
+Campaspe,2022,"3,338"
+Campaspe,2023,"3,925"
+Wodonga,2019,"3,745"
+Wodonga,2020,"3,568"
+Wodonga,2021,"3,439"
+Wodonga,2022,"3,635"
+Wodonga,2023,"4,372"
+Warrnambool,2019,"3,452"
+Warrnambool,2020,"3,335"
+Warrnambool,2021,"3,127"
+Warrnambool,2022,"2,933"
+Warrnambool,2023,"3,166"
+"Bass Coast",2019,"2,498"
+"Bass Coast",2020,"2,893"
+"Bass Coast",2021,"3,144"
+"Bass Coast",2022,"2,829"
+"Bass Coast",2023,"2,957"
+Horsham,2019,"1,951"
+Horsham,2020,"2,479"
+Horsham,2021,"2,424"
+Horsham,2022,"2,386"
+Horsham,2023,"2,756"
+Wangaratta,2019,"2,521"
+Wangaratta,2020,"3,083"
+Wangaratta,2021,"2,338"
+Wangaratta,2022,"2,448"
+Wangaratta,2023,"2,715"
+"Swan Hill",2019,"2,625"
+"Swan Hill",2020,"2,491"
+"Swan Hill",2021,"2,483"
+"Swan Hill",2022,"2,074"
+"Swan Hill",2023,"2,222"
+Moorabool,2019,"2,127"
+Moorabool,2020,"2,690"
+Moorabool,2021,"2,120"
+Moorabool,2022,"2,025"
+Moorabool,2023,"2,593"
+Nillumbik,2019,"2,233"
+Nillumbik,2020,"2,286"
+Nillumbik,2021,"2,202"
+Nillumbik,2022,"1,591"
+Nillumbik,2023,"1,776"
+"Macedon Ranges",2019,"2,444"
+"Macedon Ranges",2020,"2,734"
+"Macedon Ranges",2021,"2,023"
+"Macedon Ranges",2022,"2,027"
+"Macedon Ranges",2023,"2,131"
+Moira,2019,"2,541"
+Moira,2020,"2,270"
+Moira,2021,"2,349"
+Moira,2022,"2,048"
+Moira,2023,"2,582"
+"Colac-Otway",2019,"1,649"
+"Colac-Otway",2020,"1,810"
+"Colac-Otway",2021,"1,551"
+"Colac-Otway",2022,"1,551"
+"Colac-Otway",2023,"1,471"
+Glenelg,2019,"1,674"
+Glenelg,2020,"1,679"
+Glenelg,2021,"1,756"
+Glenelg,2022,"1,650"
+Glenelg,2023,"1,645"
+"South Gippsland",2019,"1,729"
+"South Gippsland",2020,"1,743"
+"South Gippsland",2021,"1,698"
+"South Gippsland",2022,"1,942"
+"South Gippsland",2023,"2,264"
+Benalla,2019,"1,309"
+Benalla,2020,"1,409"
+Benalla,2021,"1,423"
+Benalla,2022,"1,325"
+Benalla,2023,"1,515"
+Ararat,2019,"1,262"
+Ararat,2020,"1,564"
+Ararat,2021,"1,591"
+Ararat,2022,"1,342"
+Ararat,2023,"1,410"
+"Surf Coast",2019,"1,245"
+"Surf Coast",2020,"1,514"
+"Surf Coast",2021,"1,364"
+"Surf Coast",2022,"1,075"
+"Surf Coast",2023,"1,251"
+"Central Goldfields",2019,"1,411"
+"Central Goldfields",2020,"1,163"
+"Central Goldfields",2021,"1,084"
+"Central Goldfields",2022,"1,174"
+"Central Goldfields",2023,"1,212"
+"Southern Grampians",2019,"1,215"
+"Southern Grampians",2020,"1,160"
+"Southern Grampians",2021,"1,035"
+"Southern Grampians",2022,"1,257"
+"Southern Grampians",2023,"1,227"
+"Northern Grampians",2019,"1,104"
+"Northern Grampians",2020,"1,192"
+"Northern Grampians",2021,"1,094"
+"Northern Grampians",2022,983
+"Northern Grampians",2023,"1,076"
+"Mount Alexander",2019,"1,224"
+"Mount Alexander",2020,952
+"Mount Alexander",2021,924
+"Mount Alexander",2022,923
+"Mount Alexander",2023,"1,094"
+Corangamite,2019,646
+Corangamite,2020,867
+Corangamite,2021,868
+Corangamite,2022,682
+Corangamite,2023,729
+Murrindindi,2019,809
+Murrindindi,2020,895
+Murrindindi,2021,808
+Murrindindi,2022,750
+Murrindindi,2023,824
+Hepburn,2019,870
+Hepburn,2020,713
+Hepburn,2021,555
+Hepburn,2022,620
+Hepburn,2023,710
+Gannawarra,2019,829
+Gannawarra,2020,961
+Gannawarra,2021,793
+Gannawarra,2022,804
+Gannawarra,2023,995
+"Golden Plains",2019,650
+"Golden Plains",2020,588
+"Golden Plains",2021,604
+"Golden Plains",2022,600
+"Golden Plains",2023,729
+Moyne,2019,683
+Moyne,2020,672
+Moyne,2021,706
+Moyne,2022,659
+Moyne,2023,625
+Strathbogie,2019,629
+Strathbogie,2020,617
+Strathbogie,2021,649
+Strathbogie,2022,611
+Strathbogie,2023,529
+Indigo,2019,598
+Indigo,2020,575
+Indigo,2021,612
+Indigo,2022,730
+Indigo,2023,657
+Mansfield,2019,472
+Mansfield,2020,512
+Mansfield,2021,489
+Mansfield,2022,382
+Mansfield,2023,601
+Alpine,2019,570
+Alpine,2020,582
+Alpine,2021,553
+Alpine,2022,459
+Alpine,2023,519
+Pyrenees,2019,654
+Pyrenees,2020,515
+Pyrenees,2021,456
+Pyrenees,2022,372
+Pyrenees,2023,369
+Loddon,2019,476
+Loddon,2020,532
+Loddon,2021,539
+Loddon,2022,457
+Loddon,2023,453
+Yarriambiack,2019,477
+Yarriambiack,2020,505
+Yarriambiack,2021,375
+Yarriambiack,2022,452
+Yarriambiack,2023,413
+Hindmarsh,2019,330
+Hindmarsh,2020,590
+Hindmarsh,2021,452
+Hindmarsh,2022,265
+Hindmarsh,2023,307
+Buloke,2019,300
+Buloke,2020,498
+Buloke,2021,286
+Buloke,2022,289
+Buloke,2023,429
+Towong,2019,214
+Towong,2020,219
+Towong,2021,194
+Towong,2022,159
+Towong,2023,284
+"West Wimmera",2019,168
+"West Wimmera",2020,169
+"West Wimmera",2021,216
+"West Wimmera",2022,117
+"West Wimmera",2023,187
+Queenscliffe,2019,116
+Queenscliffe,2020,122
+Queenscliffe,2021,87
+Queenscliffe,2022,109
+Queenscliffe,2023,93

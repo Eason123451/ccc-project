@@ -1,0 +1,16 @@
+Year,Year ending,Local Government Area,Postcode,Suburb/Town Name,Offence Division,Offence Subdivision,Offence Subgroup,Offence Count
+2023,December,Alpine,3691,Dederang,A Crimes against the person,A20 Assault and related offences,A212 Non-FV Serious assault,1
+2023,December,Alpine,3691,Dederang,B Property and deception offences,B40 Theft,B42 Steal from a motor vehicle,1
+2023,December,Alpine,3691,Dederang,B Property and deception offences,B40 Theft,B49 Other theft,1
+2023,December,Alpine,3691,Dederang,D Public order and security offences,D10 Weapons and explosives offences,D11 Firearms offences,4
+2023,December,Alpine,3691,Dederang,D Public order and security offences,D10 Weapons and explosives offences,D13 Explosives offences,1
+2023,December,Alpine,3691,Glen Creek,B Property and deception offences,B50 Deception,B53 Obtain benefit by deception,1
+2023,December,Alpine,3691,Kancoona,B Property and deception offences,B30 Burglary/Break and enter,B322 Non-residential non-aggravated burglary,1
+2023,December,Alpine,3691,Kergunyah South,A Crimes against the person,"A70 Stalking, harassment and threatening behaviour",A712 Non-FV Stalking,1
+2023,December,Alpine,3691,Kergunyah South,A Crimes against the person,Other crimes against the person,Other crimes against the person,1
+2023,December,Alpine,3691,Mongans Bridge,B Property and deception offences,B40 Theft,B49 Other theft,1
+2023,December,Alpine,3691,Running Creek,B Property and deception offences,B20 Property damage,B21 Criminal damage,2
+2023,December,Alpine,3697,Tawonga,A Crimes against the person,A20 Assault and related offences,A232 Non-FV Common assault,1
+2023,December,Alpine,3697,Tawonga,B Property and deception offences,B40 Theft,B49 Other theft,1
+2023,December,Alpine,3697,Tawonga,B Property and deception offences,B50 Deception,B53 Obtain benefit by deception,1
+2023,December,Alpine,3698,Tawonga South,A Crimes against the person,A20 Assault and related offences,A232 Non-FV Common assault,1
