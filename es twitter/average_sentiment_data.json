@@ -1,0 +1,758 @@
+[
+  {
+    "Total count": "50,811",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-06-21T00:00:00.000+10:00",
+    "Average sentiment": 0.263,
+    "time per day": "2021-06-21"
+  },
+  {
+    "Total count": "29,640",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-06-21T00:00:00.000+10:00",
+    "Average sentiment": -0.206,
+    "time per day": "2021-06-21"
+  },
+  {
+    "Total count": "80,451",
+    "filters": "all data",
+    "@timestamp": "2021-06-21T00:00:00.000+10:00",
+    "Average sentiment": 0.09,
+    "time per day": "2021-06-21"
+  },
+  {
+    "Total count": "73,295",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-06-22T00:00:00.000+10:00",
+    "Average sentiment": 0.262,
+    "time per day": "2021-06-22"
+  },
+  {
+    "Total count": "44,578",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-06-22T00:00:00.000+10:00",
+    "Average sentiment": -0.189,
+    "time per day": "2021-06-22"
+  },
+  {
+    "Total count": "117,873",
+    "filters": "all data",
+    "@timestamp": "2021-06-22T00:00:00.000+10:00",
+    "Average sentiment": 0.092,
+    "time per day": "2021-06-22"
+  },
+  {
+    "Total count": "75,668",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-06-23T00:00:00.000+10:00",
+    "Average sentiment": 0.261,
+    "time per day": "2021-06-23"
+  },
+  {
+    "Total count": "46,090",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-06-23T00:00:00.000+10:00",
+    "Average sentiment": -0.195,
+    "time per day": "2021-06-23"
+  },
+  {
+    "Total count": "121,758",
+    "filters": "all data",
+    "@timestamp": "2021-06-23T00:00:00.000+10:00",
+    "Average sentiment": 0.089,
+    "time per day": "2021-06-23"
+  },
+  {
+    "Total count": "78,492",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-06-24T00:00:00.000+10:00",
+    "Average sentiment": 0.265,
+    "time per day": "2021-06-24"
+  },
+  {
+    "Total count": "46,663",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-06-24T00:00:00.000+10:00",
+    "Average sentiment": -0.199,
+    "time per day": "2021-06-24"
+  },
+  {
+    "Total count": "125,155",
+    "filters": "all data",
+    "@timestamp": "2021-06-24T00:00:00.000+10:00",
+    "Average sentiment": 0.092,
+    "time per day": "2021-06-24"
+  },
+  {
+    "Total count": "14,012",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-06-25T00:00:00.000+10:00",
+    "Average sentiment": 0.273,
+    "time per day": "2021-06-25"
+  },
+  {
+    "Total count": "9,615",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-06-25T00:00:00.000+10:00",
+    "Average sentiment": -0.182,
+    "time per day": "2021-06-25"
+  },
+  {
+    "Total count": "23,627",
+    "filters": "all data",
+    "@timestamp": "2021-06-25T00:00:00.000+10:00",
+    "Average sentiment": 0.088,
+    "time per day": "2021-06-25"
+  },
+  {
+    "Total count": "62,236",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-06-29T00:00:00.000+10:00",
+    "Average sentiment": 0.263,
+    "time per day": "2021-06-29"
+  },
+  {
+    "Total count": "39,028",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-06-29T00:00:00.000+10:00",
+    "Average sentiment": -0.196,
+    "time per day": "2021-06-29"
+  },
+  {
+    "Total count": "101,264",
+    "filters": "all data",
+    "@timestamp": "2021-06-29T00:00:00.000+10:00",
+    "Average sentiment": 0.086,
+    "time per day": "2021-06-29"
+  },
+  {
+    "Total count": "84,032",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-06-30T00:00:00.000+10:00",
+    "Average sentiment": 0.268,
+    "time per day": "2021-06-30"
+  },
+  {
+    "Total count": "50,950",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-06-30T00:00:00.000+10:00",
+    "Average sentiment": -0.2,
+    "time per day": "2021-06-30"
+  },
+  {
+    "Total count": "134,982",
+    "filters": "all data",
+    "@timestamp": "2021-06-30T00:00:00.000+10:00",
+    "Average sentiment": 0.091,
+    "time per day": "2021-06-30"
+  },
+  {
+    "Total count": "86,374",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-01T00:00:00.000+10:00",
+    "Average sentiment": 0.27,
+    "time per day": "2021-07-01"
+  },
+  {
+    "Total count": "53,459",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-01T00:00:00.000+10:00",
+    "Average sentiment": -0.198,
+    "time per day": "2021-07-01"
+  },
+  {
+    "Total count": "139,833",
+    "filters": "all data",
+    "@timestamp": "2021-07-01T00:00:00.000+10:00",
+    "Average sentiment": 0.091,
+    "time per day": "2021-07-01"
+  },
+  {
+    "Total count": "6,820",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-02T00:00:00.000+10:00",
+    "Average sentiment": 0.271,
+    "time per day": "2021-07-02"
+  },
+  {
+    "Total count": "3,952",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-02T00:00:00.000+10:00",
+    "Average sentiment": -0.223,
+    "time per day": "2021-07-02"
+  },
+  {
+    "Total count": "10,772",
+    "filters": "all data",
+    "@timestamp": "2021-07-02T00:00:00.000+10:00",
+    "Average sentiment": 0.09,
+    "time per day": "2021-07-02"
+  },
+  {
+    "Total count": "18,944",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-04T00:00:00.000+10:00",
+    "Average sentiment": 0.275,
+    "time per day": "2021-07-04"
+  },
+  {
+    "Total count": "11,238",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-04T00:00:00.000+10:00",
+    "Average sentiment": -0.212,
+    "time per day": "2021-07-04"
+  },
+  {
+    "Total count": "30,182",
+    "filters": "all data",
+    "@timestamp": "2021-07-04T00:00:00.000+10:00",
+    "Average sentiment": 0.094,
+    "time per day": "2021-07-04"
+  },
+  {
+    "Total count": "62,883",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-06T00:00:00.000+10:00",
+    "Average sentiment": 0.259,
+    "time per day": "2021-07-06"
+  },
+  {
+    "Total count": "46,498",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-06T00:00:00.000+10:00",
+    "Average sentiment": -0.165,
+    "time per day": "2021-07-06"
+  },
+  {
+    "Total count": "109,381",
+    "filters": "all data",
+    "@timestamp": "2021-07-06T00:00:00.000+10:00",
+    "Average sentiment": 0.079,
+    "time per day": "2021-07-06"
+  },
+  {
+    "Total count": "80,460",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-07T00:00:00.000+10:00",
+    "Average sentiment": 0.266,
+    "time per day": "2021-07-07"
+  },
+  {
+    "Total count": "52,013",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-07T00:00:00.000+10:00",
+    "Average sentiment": -0.187,
+    "time per day": "2021-07-07"
+  },
+  {
+    "Total count": "132,473",
+    "filters": "all data",
+    "@timestamp": "2021-07-07T00:00:00.000+10:00",
+    "Average sentiment": 0.088,
+    "time per day": "2021-07-07"
+  },
+  {
+    "Total count": "55,593",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-08T00:00:00.000+10:00",
+    "Average sentiment": 0.266,
+    "time per day": "2021-07-08"
+  },
+  {
+    "Total count": "34,569",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-08T00:00:00.000+10:00",
+    "Average sentiment": -0.193,
+    "time per day": "2021-07-08"
+  },
+  {
+    "Total count": "90,162",
+    "filters": "all data",
+    "@timestamp": "2021-07-08T00:00:00.000+10:00",
+    "Average sentiment": 0.09,
+    "time per day": "2021-07-08"
+  },
+  {
+    "Total count": "62,713",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-09T00:00:00.000+10:00",
+    "Average sentiment": 0.272,
+    "time per day": "2021-07-09"
+  },
+  {
+    "Total count": "38,902",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-09T00:00:00.000+10:00",
+    "Average sentiment": -0.195,
+    "time per day": "2021-07-09"
+  },
+  {
+    "Total count": "101,615",
+    "filters": "all data",
+    "@timestamp": "2021-07-09T00:00:00.000+10:00",
+    "Average sentiment": 0.093,
+    "time per day": "2021-07-09"
+  },
+  {
+    "Total count": "79,528",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-10T00:00:00.000+10:00",
+    "Average sentiment": 0.28,
+    "time per day": "2021-07-10"
+  },
+  {
+    "Total count": "45,245",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-10T00:00:00.000+10:00",
+    "Average sentiment": -0.207,
+    "time per day": "2021-07-10"
+  },
+  {
+    "Total count": "124,773",
+    "filters": "all data",
+    "@timestamp": "2021-07-10T00:00:00.000+10:00",
+    "Average sentiment": 0.103,
+    "time per day": "2021-07-10"
+  },
+  {
+    "Total count": "83,798",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-11T00:00:00.000+10:00",
+    "Average sentiment": 0.281,
+    "time per day": "2021-07-11"
+  },
+  {
+    "Total count": "49,155",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-11T00:00:00.000+10:00",
+    "Average sentiment": -0.213,
+    "time per day": "2021-07-11"
+  },
+  {
+    "Total count": "132,953",
+    "filters": "all data",
+    "@timestamp": "2021-07-11T00:00:00.000+10:00",
+    "Average sentiment": 0.099,
+    "time per day": "2021-07-11"
+  },
+  {
+    "Total count": "84,657",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-12T00:00:00.000+10:00",
+    "Average sentiment": 0.27,
+    "time per day": "2021-07-12"
+  },
+  {
+    "Total count": "54,037",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-12T00:00:00.000+10:00",
+    "Average sentiment": -0.215,
+    "time per day": "2021-07-12"
+  },
+  {
+    "Total count": "138,694",
+    "filters": "all data",
+    "@timestamp": "2021-07-12T00:00:00.000+10:00",
+    "Average sentiment": 0.081,
+    "time per day": "2021-07-12"
+  },
+  {
+    "Total count": "82,336",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-13T00:00:00.000+10:00",
+    "Average sentiment": 0.27,
+    "time per day": "2021-07-13"
+  },
+  {
+    "Total count": "47,339",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-13T00:00:00.000+10:00",
+    "Average sentiment": -0.198,
+    "time per day": "2021-07-13"
+  },
+  {
+    "Total count": "129,675",
+    "filters": "all data",
+    "@timestamp": "2021-07-13T00:00:00.000+10:00",
+    "Average sentiment": 0.099,
+    "time per day": "2021-07-13"
+  },
+  {
+    "Total count": "85,065",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-14T00:00:00.000+10:00",
+    "Average sentiment": 0.267,
+    "time per day": "2021-07-14"
+  },
+  {
+    "Total count": "51,642",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-14T00:00:00.000+10:00",
+    "Average sentiment": -0.2,
+    "time per day": "2021-07-14"
+  },
+  {
+    "Total count": "136,707",
+    "filters": "all data",
+    "@timestamp": "2021-07-14T00:00:00.000+10:00",
+    "Average sentiment": 0.09,
+    "time per day": "2021-07-14"
+  },
+  {
+    "Total count": "88,467",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-15T00:00:00.000+10:00",
+    "Average sentiment": 0.264,
+    "time per day": "2021-07-15"
+  },
+  {
+    "Total count": "57,481",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-15T00:00:00.000+10:00",
+    "Average sentiment": -0.197,
+    "time per day": "2021-07-15"
+  },
+  {
+    "Total count": "145,948",
+    "filters": "all data",
+    "@timestamp": "2021-07-15T00:00:00.000+10:00",
+    "Average sentiment": 0.082,
+    "time per day": "2021-07-15"
+  },
+  {
+    "Total count": "68,536",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-16T00:00:00.000+10:00",
+    "Average sentiment": 0.262,
+    "time per day": "2021-07-16"
+  },
+  {
+    "Total count": "41,319",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-16T00:00:00.000+10:00",
+    "Average sentiment": -0.203,
+    "time per day": "2021-07-16"
+  },
+  {
+    "Total count": "109,855",
+    "filters": "all data",
+    "@timestamp": "2021-07-16T00:00:00.000+10:00",
+    "Average sentiment": 0.087,
+    "time per day": "2021-07-16"
+  },
+  {
+    "Total count": "85,685",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-17T00:00:00.000+10:00",
+    "Average sentiment": 0.271,
+    "time per day": "2021-07-17"
+  },
+  {
+    "Total count": "52,291",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-17T00:00:00.000+10:00",
+    "Average sentiment": -0.206,
+    "time per day": "2021-07-17"
+  },
+  {
+    "Total count": "137,976",
+    "filters": "all data",
+    "@timestamp": "2021-07-17T00:00:00.000+10:00",
+    "Average sentiment": 0.09,
+    "time per day": "2021-07-17"
+  },
+  {
+    "Total count": "83,987",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-18T00:00:00.000+10:00",
+    "Average sentiment": 0.274,
+    "time per day": "2021-07-18"
+  },
+  {
+    "Total count": "52,154",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-18T00:00:00.000+10:00",
+    "Average sentiment": -0.206,
+    "time per day": "2021-07-18"
+  },
+  {
+    "Total count": "136,141",
+    "filters": "all data",
+    "@timestamp": "2021-07-18T00:00:00.000+10:00",
+    "Average sentiment": 0.09,
+    "time per day": "2021-07-18"
+  },
+  {
+    "Total count": "85,831",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-19T00:00:00.000+10:00",
+    "Average sentiment": 0.267,
+    "time per day": "2021-07-19"
+  },
+  {
+    "Total count": "52,809",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-19T00:00:00.000+10:00",
+    "Average sentiment": -0.197,
+    "time per day": "2021-07-19"
+  },
+  {
+    "Total count": "138,640",
+    "filters": "all data",
+    "@timestamp": "2021-07-19T00:00:00.000+10:00",
+    "Average sentiment": 0.09,
+    "time per day": "2021-07-19"
+  },
+  {
+    "Total count": "87,298",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-20T00:00:00.000+10:00",
+    "Average sentiment": 0.264,
+    "time per day": "2021-07-20"
+  },
+  {
+    "Total count": "53,193",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-20T00:00:00.000+10:00",
+    "Average sentiment": -0.197,
+    "time per day": "2021-07-20"
+  },
+  {
+    "Total count": "140,491",
+    "filters": "all data",
+    "@timestamp": "2021-07-20T00:00:00.000+10:00",
+    "Average sentiment": 0.089,
+    "time per day": "2021-07-20"
+  },
+  {
+    "Total count": "92,523",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-21T00:00:00.000+10:00",
+    "Average sentiment": 0.265,
+    "time per day": "2021-07-21"
+  },
+  {
+    "Total count": "54,879",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-21T00:00:00.000+10:00",
+    "Average sentiment": -0.195,
+    "time per day": "2021-07-21"
+  },
+  {
+    "Total count": "147,402",
+    "filters": "all data",
+    "@timestamp": "2021-07-21T00:00:00.000+10:00",
+    "Average sentiment": 0.094,
+    "time per day": "2021-07-21"
+  },
+  {
+    "Total count": "91,556",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-22T00:00:00.000+10:00",
+    "Average sentiment": 0.268,
+    "time per day": "2021-07-22"
+  },
+  {
+    "Total count": "56,707",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-22T00:00:00.000+10:00",
+    "Average sentiment": -0.201,
+    "time per day": "2021-07-22"
+  },
+  {
+    "Total count": "148,263",
+    "filters": "all data",
+    "@timestamp": "2021-07-22T00:00:00.000+10:00",
+    "Average sentiment": 0.089,
+    "time per day": "2021-07-22"
+  },
+  {
+    "Total count": "98,417",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-23T00:00:00.000+10:00",
+    "Average sentiment": 0.266,
+    "time per day": "2021-07-23"
+  },
+  {
+    "Total count": "64,029",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-23T00:00:00.000+10:00",
+    "Average sentiment": -0.196,
+    "time per day": "2021-07-23"
+  },
+  {
+    "Total count": "162,446",
+    "filters": "all data",
+    "@timestamp": "2021-07-23T00:00:00.000+10:00",
+    "Average sentiment": 0.084,
+    "time per day": "2021-07-23"
+  },
+  {
+    "Total count": "96,061",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-24T00:00:00.000+10:00",
+    "Average sentiment": 0.267,
+    "time per day": "2021-07-24"
+  },
+  {
+    "Total count": "69,942",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-24T00:00:00.000+10:00",
+    "Average sentiment": -0.219,
+    "time per day": "2021-07-24"
+  },
+  {
+    "Total count": "166,003",
+    "filters": "all data",
+    "@timestamp": "2021-07-24T00:00:00.000+10:00",
+    "Average sentiment": 0.062,
+    "time per day": "2021-07-24"
+  },
+  {
+    "Total count": "90,182",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-25T00:00:00.000+10:00",
+    "Average sentiment": 0.272,
+    "time per day": "2021-07-25"
+  },
+  {
+    "Total count": "59,768",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-25T00:00:00.000+10:00",
+    "Average sentiment": -0.206,
+    "time per day": "2021-07-25"
+  },
+  {
+    "Total count": "149,950",
+    "filters": "all data",
+    "@timestamp": "2021-07-25T00:00:00.000+10:00",
+    "Average sentiment": 0.082,
+    "time per day": "2021-07-25"
+  },
+  {
+    "Total count": "89,669",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-26T00:00:00.000+10:00",
+    "Average sentiment": 0.27,
+    "time per day": "2021-07-26"
+  },
+  {
+    "Total count": "53,334",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-26T00:00:00.000+10:00",
+    "Average sentiment": -0.198,
+    "time per day": "2021-07-26"
+  },
+  {
+    "Total count": "143,003",
+    "filters": "all data",
+    "@timestamp": "2021-07-26T00:00:00.000+10:00",
+    "Average sentiment": 0.095,
+    "time per day": "2021-07-26"
+  },
+  {
+    "Total count": "92,328",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-27T00:00:00.000+10:00",
+    "Average sentiment": 0.267,
+    "time per day": "2021-07-27"
+  },
+  {
+    "Total count": "54,854",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-27T00:00:00.000+10:00",
+    "Average sentiment": -0.196,
+    "time per day": "2021-07-27"
+  },
+  {
+    "Total count": "147,182",
+    "filters": "all data",
+    "@timestamp": "2021-07-27T00:00:00.000+10:00",
+    "Average sentiment": 0.094,
+    "time per day": "2021-07-27"
+  },
+  {
+    "Total count": "89,925",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-28T00:00:00.000+10:00",
+    "Average sentiment": 0.264,
+    "time per day": "2021-07-28"
+  },
+  {
+    "Total count": "54,938",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-28T00:00:00.000+10:00",
+    "Average sentiment": -0.193,
+    "time per day": "2021-07-28"
+  },
+  {
+    "Total count": "144,863",
+    "filters": "all data",
+    "@timestamp": "2021-07-28T00:00:00.000+10:00",
+    "Average sentiment": 0.091,
+    "time per day": "2021-07-28"
+  },
+  {
+    "Total count": "89,715",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-29T00:00:00.000+10:00",
+    "Average sentiment": 0.265,
+    "time per day": "2021-07-29"
+  },
+  {
+    "Total count": "53,690",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-29T00:00:00.000+10:00",
+    "Average sentiment": -0.196,
+    "time per day": "2021-07-29"
+  },
+  {
+    "Total count": "143,405",
+    "filters": "all data",
+    "@timestamp": "2021-07-29T00:00:00.000+10:00",
+    "Average sentiment": 0.093,
+    "time per day": "2021-07-29"
+  },
+  {
+    "Total count": "94,073",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-30T00:00:00.000+10:00",
+    "Average sentiment": 0.266,
+    "time per day": "2021-07-30"
+  },
+  {
+    "Total count": "56,877",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-30T00:00:00.000+10:00",
+    "Average sentiment": -0.203,
+    "time per day": "2021-07-30"
+  },
+  {
+    "Total count": "150,950",
+    "filters": "all data",
+    "@timestamp": "2021-07-30T00:00:00.000+10:00",
+    "Average sentiment": 0.089,
+    "time per day": "2021-07-30"
+  },
+  {
+    "Total count": "18,931",
+    "filters": "count of positive sentiment",
+    "@timestamp": "2021-07-31T00:00:00.000+10:00",
+    "Average sentiment": 0.28,
+    "time per day": "2021-07-31"
+  },
+  {
+    "Total count": "10,802",
+    "filters": "count of negative sentiment",
+    "@timestamp": "2021-07-31T00:00:00.000+10:00",
+    "Average sentiment": -0.197,
+    "time per day": "2021-07-31"
+  },
+  {
+    "Total count": "29,733",
+    "filters": "all data",
+    "@timestamp": "2021-07-31T00:00:00.000+10:00",
+    "Average sentiment": 0.107,
+    "time per day": "2021-07-31"
+  }
+]

@@ -1,7 +1,7 @@
 from elasticsearch import Elasticsearch
 import pandas as pd
 from elasticsearch.helpers import bulk
-file_name ="/home/yeshengyao/split_output_part5.csv"
+file_name ="/home/yeshengyao/split_output_part2.csv"
 
 df = pd.read_csv(file_name)
 print("DataFrame head:\n", df.head())  
