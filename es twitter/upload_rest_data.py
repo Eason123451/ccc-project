@@ -14,7 +14,7 @@ es = Elasticsearch(
 
 
 
-df = pd.read_csv("/home/yeshengyao/split_output_part3.csv")
+df = pd.read_csv("/home/yeshengyao/split_output_part6.csv")
 df.fillna("", inplace=True)
 records = df.to_dict(orient='records')
 

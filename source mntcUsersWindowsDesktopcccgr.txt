@@ -1,0 +1,73 @@
+source /mnt/c/Users/Windows/Desktop/ccc/grp50.sh
+MDA0MzY2NmQ5ZDFiZTJi
+
+ssh -i ~/.ssh/demo.pem -L 6443:$(openstack coe cluster show elastic -f json | jq -r '.master_addresses[]'):6443 ubuntu@$(openstack server show bastion -c addresses -f json | jq -r '.addresses["qh2-uom-internal"][]')
+
+elastic 密码：epheli0AJ4eir9xaiM2muqu6eehee4oh
+
+
+export KUBECONFIG=~/.kube/config
+
+
+kubectl port-forward service/elasticsearch-master -n elastic 9200:9200
+kubectl port-forward service/kibana-kibana -n elastic 5601:5601
+
+test api
+curl -k 'https://127.0.0.1:9200/_cluster/health' --user 'elastic:epheli0AJ4eir9xaiM2muqu6eehee4oh' | jq '.'
+curl -XPUT -k 'https://127.0.0.1:9200/twitters'\
+   --header 'Content-Type: application/json'\
+   --data '{
+    "settings": {
+        "index": {
+            "routing": {
+                "allocation": {
+                    "include": {
+                        "_tier_preference": "data_content"
+                    }
+                }
+            },
+            "number_of_shards": 1,
+            "number_of_replicas": 1,
+            "provided_name": "twitter",
+            "creation_date": "1715264342461",
+            "uuid": "RDgtd1yRTYuEAKwG8ivsYQ",
+            "version": {
+                "created": "8050199"
+            }
+        }
+    },
+    "mappings": {
+        "properties": {
+            "twitter": {
+                "properties": {
+                    "Created_At": {
+                        "type": "date",
+                        "format": "strict_date_optional_time||yyyy-MM-dd"
+                    },
+                    "Sentiment": {
+                        "type": "float"
+                    },
+                    "Text": {
+                        "type": "text"
+                    }
+                }
+            }
+        }
+    }
+}' --user 'elastic:epheli0AJ4eir9xaiM2muqu6eehee4oh' | jq '.'
+
+
+curl -u elastic:epheli0AJ4eir9xaiM2muqu6eehee4oh -X DELETE "https://localhost:9200/twitter" -k
+
+
+curl -k -XGET 'https://127.0.0.1:9200/twitter/_count' --user 'elastic:epheli0AJ4eir9xaiM2muqu6eehee4oh'
+
+curl -k -XPOST 'https://127.0.0.1:9200/_bulk' \
+--header 'Content-Type: application/x-ndjson' \
+--data-binary @/path/to/bulk_data.ndjson \
+--user 'elastic:epheli0AJ4eir9xaiM2muqu6eehee4oh'
+
+python3 /mnt/c/Users/Windows/Documents/GitHub/ccc-project/upload_rest_data.py
+
+
+cp /mnt/c/Users/Windows/Desktop/ccc/es twitter/split_output_part3.csv /home/yeshengyao
