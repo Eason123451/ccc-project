@@ -1,6 +1,10 @@
 from elasticsearch import Elasticsearch
 import pandas as pd
 from elasticsearch.helpers import bulk
+file_name ="/home/yeshengyao/split_output_part5.csv"
+
+df = pd.read_csv(file_name)
+print("DataFrame head:\n", df.head())  
 
 es = Elasticsearch(
     ['https://localhost:9200'],
@@ -14,7 +18,7 @@ es = Elasticsearch(
 
 
 
-df = pd.read_csv("/home/yeshengyao/split_output_part6.csv")
+df = pd.read_csv(file_name)
 df.fillna("", inplace=True)
 records = df.to_dict(orient='records')
 
