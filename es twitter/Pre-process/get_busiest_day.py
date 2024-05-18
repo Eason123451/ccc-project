@@ -12,7 +12,7 @@ es = Elasticsearch(
     retry_on_timeout=True
 )
 
-index_name = 'daily_average_sentiment'
+index_name = 'busiest_day'
 scroll_size = 1000
 scroll_time = '2m'
 response = es.search(
@@ -35,7 +35,7 @@ while True:
     data.extend(response['hits']['hits'])
     scroll_id = response['_scroll_id']
 all_docs = [doc['_source'] for doc in data]
-save_path = "/mnt/c/Users/Windows/Documents/GitHub/ccc-project/es twitter/Pre-process/daily_average_sentiment.json"
+save_path = "/mnt/c/Users/Windows/Documents/GitHub/ccc-project/es twitter/Pre-process/busiest_day.json"
 os.makedirs(os.path.dirname(save_path), exist_ok=True)
 with open(save_path, 'w') as json_file:
     json.dump(all_docs, json_file, indent=2)

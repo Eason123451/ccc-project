@@ -1,0 +1,202 @@
+[
+  {
+    "Reported Date per day": "2021-06-22",
+    "@timestamp": "2021-06-22T00:00:00.000+10:00",
+    "Sum of Offence count": 300
+  },
+  {
+    "Reported Date per day": "2021-06-23",
+    "@timestamp": "2021-06-23T00:00:00.000+10:00",
+    "Sum of Offence count": 240
+  },
+  {
+    "Reported Date per day": "2021-06-24",
+    "@timestamp": "2021-06-24T00:00:00.000+10:00",
+    "Sum of Offence count": 306
+  },
+  {
+    "Reported Date per day": "2021-06-25",
+    "@timestamp": "2021-06-25T00:00:00.000+10:00",
+    "Sum of Offence count": 277
+  },
+  {
+    "Reported Date per day": "2021-06-26",
+    "@timestamp": "2021-06-26T00:00:00.000+10:00",
+    "Sum of Offence count": 250
+  },
+  {
+    "Reported Date per day": "2021-06-27",
+    "@timestamp": "2021-06-27T00:00:00.000+10:00",
+    "Sum of Offence count": 254
+  },
+  {
+    "Reported Date per day": "2021-06-28",
+    "@timestamp": "2021-06-28T00:00:00.000+10:00",
+    "Sum of Offence count": 362
+  },
+  {
+    "Reported Date per day": "2021-06-29",
+    "@timestamp": "2021-06-29T00:00:00.000+10:00",
+    "Sum of Offence count": 309
+  },
+  {
+    "Reported Date per day": "2021-06-30",
+    "@timestamp": "2021-06-30T00:00:00.000+10:00",
+    "Sum of Offence count": 321
+  },
+  {
+    "Reported Date per day": "2021-07-01",
+    "@timestamp": "2021-07-01T00:00:00.000+10:00",
+    "Sum of Offence count": 309
+  },
+  {
+    "Reported Date per day": "2021-07-02",
+    "@timestamp": "2021-07-02T00:00:00.000+10:00",
+    "Sum of Offence count": 274
+  },
+  {
+    "Reported Date per day": "2021-07-03",
+    "@timestamp": "2021-07-03T00:00:00.000+10:00",
+    "Sum of Offence count": 239
+  },
+  {
+    "Reported Date per day": "2021-07-04",
+    "@timestamp": "2021-07-04T00:00:00.000+10:00",
+    "Sum of Offence count": 244
+  },
+  {
+    "Reported Date per day": "2021-07-05",
+    "@timestamp": "2021-07-05T00:00:00.000+10:00",
+    "Sum of Offence count": 307
+  },
+  {
+    "Reported Date per day": "2021-07-06",
+    "@timestamp": "2021-07-06T00:00:00.000+10:00",
+    "Sum of Offence count": 321
+  },
+  {
+    "Reported Date per day": "2021-07-07",
+    "@timestamp": "2021-07-07T00:00:00.000+10:00",
+    "Sum of Offence count": 277
+  },
+  {
+    "Reported Date per day": "2021-07-08",
+    "@timestamp": "2021-07-08T00:00:00.000+10:00",
+    "Sum of Offence count": 318
+  },
+  {
+    "Reported Date per day": "2021-07-09",
+    "@timestamp": "2021-07-09T00:00:00.000+10:00",
+    "Sum of Offence count": 276
+  },
+  {
+    "Reported Date per day": "2021-07-10",
+    "@timestamp": "2021-07-10T00:00:00.000+10:00",
+    "Sum of Offence count": 252
+  },
+  {
+    "Reported Date per day": "2021-07-11",
+    "@timestamp": "2021-07-11T00:00:00.000+10:00",
+    "Sum of Offence count": 310
+  },
+  {
+    "Reported Date per day": "2021-07-12",
+    "@timestamp": "2021-07-12T00:00:00.000+10:00",
+    "Sum of Offence count": 300
+  },
+  {
+    "Reported Date per day": "2021-07-13",
+    "@timestamp": "2021-07-13T00:00:00.000+10:00",
+    "Sum of Offence count": 284
+  },
+  {
+    "Reported Date per day": "2021-07-14",
+    "@timestamp": "2021-07-14T00:00:00.000+10:00",
+    "Sum of Offence count": 265
+  },
+  {
+    "Reported Date per day": "2021-07-15",
+    "@timestamp": "2021-07-15T00:00:00.000+10:00",
+    "Sum of Offence count": 240
+  },
+  {
+    "Reported Date per day": "2021-07-16",
+    "@timestamp": "2021-07-16T00:00:00.000+10:00",
+    "Sum of Offence count": 278
+  },
+  {
+    "Reported Date per day": "2021-07-17",
+    "@timestamp": "2021-07-17T00:00:00.000+10:00",
+    "Sum of Offence count": 267
+  },
+  {
+    "Reported Date per day": "2021-07-18",
+    "@timestamp": "2021-07-18T00:00:00.000+10:00",
+    "Sum of Offence count": 298
+  },
+  {
+    "Reported Date per day": "2021-07-19",
+    "@timestamp": "2021-07-19T00:00:00.000+10:00",
+    "Sum of Offence count": 309
+  },
+  {
+    "Reported Date per day": "2021-07-20",
+    "@timestamp": "2021-07-20T00:00:00.000+10:00",
+    "Sum of Offence count": 269
+  },
+  {
+    "Reported Date per day": "2021-07-21",
+    "@timestamp": "2021-07-21T00:00:00.000+10:00",
+    "Sum of Offence count": 200
+  },
+  {
+    "Reported Date per day": "2021-07-22",
+    "@timestamp": "2021-07-22T00:00:00.000+10:00",
+    "Sum of Offence count": 186
+  },
+  {
+    "Reported Date per day": "2021-07-23",
+    "@timestamp": "2021-07-23T00:00:00.000+10:00",
+    "Sum of Offence count": 179
+  },
+  {
+    "Reported Date per day": "2021-07-24",
+    "@timestamp": "2021-07-24T00:00:00.000+10:00",
+    "Sum of Offence count": 163
+  },
+  {
+    "Reported Date per day": "2021-07-25",
+    "@timestamp": "2021-07-25T00:00:00.000+10:00",
+    "Sum of Offence count": 192
+  },
+  {
+    "Reported Date per day": "2021-07-26",
+    "@timestamp": "2021-07-26T00:00:00.000+10:00",
+    "Sum of Offence count": 286
+  },
+  {
+    "Reported Date per day": "2021-07-27",
+    "@timestamp": "2021-07-27T00:00:00.000+10:00",
+    "Sum of Offence count": 209
+  },
+  {
+    "Reported Date per day": "2021-07-28",
+    "@timestamp": "2021-07-28T00:00:00.000+10:00",
+    "Sum of Offence count": 298
+  },
+  {
+    "Reported Date per day": "2021-07-29",
+    "@timestamp": "2021-07-29T00:00:00.000+10:00",
+    "Sum of Offence count": 285
+  },
+  {
+    "Reported Date per day": "2021-07-30",
+    "@timestamp": "2021-07-30T00:00:00.000+10:00",
+    "Sum of Offence count": 254
+  },
+  {
+    "Reported Date per day": "2021-07-31",
+    "@timestamp": "2021-07-31T00:00:00.000+10:00",
+    "Sum of Offence count": 245
+  }
+]
