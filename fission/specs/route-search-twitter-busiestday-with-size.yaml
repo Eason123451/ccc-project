@@ -1,0 +1,22 @@
+apiVersion: fission.io/v1
+kind: HTTPTrigger
+metadata:
+  creationTimestamp: null
+  name: search-twitter-busiestday-with-size
+spec:
+  createingress: true
+  functionref:
+    functionweights: null
+    name: search-twitter-busiestday
+    type: name
+  host: ""
+  ingressconfig:
+    annotations: null
+    host: '*'
+    path: /search-twitter-busiestday
+    tls: ""
+  method: ""
+  methods:
+  - GET
+  prefix: ""
+  relativeurl: /search-twitter-busiestday
