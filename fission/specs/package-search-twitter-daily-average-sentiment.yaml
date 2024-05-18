@@ -1,0 +1,25 @@
+include:
+- ./functions/search-twitter-daily-average-sentiment.zip
+kind: ArchiveUploadSpec
+name: functions-search-twitter-daily-average-sentiment-zip-qOLW
+
+---
+apiVersion: fission.io/v1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: search-twitter-daily-average-sentiment
+spec:
+  buildcmd: ./build.sh
+  deployment:
+    checksum: {}
+  environment:
+    name: python
+    namespace: ""
+  source:
+    checksum: {}
+    type: url
+    url: archive://functions-search-twitter-daily-average-sentiment-zip-qOLW
+status:
+  buildstatus: pending
+  lastUpdateTimestamp: "2024-05-18T08:45:52Z"
