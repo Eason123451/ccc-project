@@ -12,6 +12,8 @@
 
 ### Scenario 1: Daily Sentiment and Tweet Volume Analysis
 
+![Scenario 1](/output_images/Scenario_1.png)
+
 #### Overview
 This analysis presents the relationship between daily tweet volumes and average sentiment scores over a period from June 21, 2021, to July 31, 2021.
 
@@ -28,6 +30,8 @@ This analysis presents the relationship between daily tweet volumes and average 
 The dual tracking of sentiment and tweet volume offers insights into public mood and engagement, useful for understanding reactions to events and guiding strategic responses.
 
 ### Scenario 2: Sentiment Distribution on Busiest and Quietest Days
+
+![Scenario 2](/output_images/Scenario_2.png)
 
 #### Overview
 This analysis compares the distribution of sentiment scores on the busiest and quietest days, visualized through histograms and normal distribution fits.
@@ -53,6 +57,8 @@ This visual comparison highlights how public sentiment varies between days with 
 
 ### Scenario 3: Correlation between Crime Reports and Sentiment
 
+![Scenario 3](/output_images/Scenario_3.png)
+
 #### Overview
 This analysis explores the correlation between daily crime reports and average sentiment scores from tweets.
 
@@ -69,8 +75,11 @@ The plot displays daily crime reports against average sentiment with a Pearson c
 #### Conclusion
 Understanding this correlation helps in assessing how public sentiment on social media corresponds with crime dynamics, potentially aiding in community-focused strategies and public safety measures.
 
-
 ### Scenario 4: Sampling Crime-Related Tweets
+
+![Busiest Day](/output_images/Scenario_4_1.png)
+
+![Quietest Day](/output_images/Scenario_4_2.png)
 
 #### Overview
 This scenario demonstrates the functionality of dynamically sampling and displaying five tweets related to crime from the busiest and quietest days. This is achieved through specific Python functions.
