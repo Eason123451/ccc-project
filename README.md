@@ -3,10 +3,16 @@
 ## Data Preparation
 
 ### Tweets Data Files
-- **tweets_100Gb_filtered.csv**: Due to the large size of the file, we are only interested in tweets with `tag` element contains `"Australia-based"`. Extracted fields "created_at", "sentiment", and "text" on SPARTAN using scripts:
+- **tweets_100Gb_filtered.csv**: Due to the large size of the file, we are only interested in tweets with `tag` element contains `"Australia-based"`. Extracted fields `"created_at"`, `"sentiment"`, and `"text"` on SPARTAN using scripts:
   - `filter_data.py`
   - `filter.slurm`
-- **tweets_cleaned.csv**: Cleaned to remove zero sentiments and emojis.
+- **tweets_cleaned.csv**: Cleaned to remove zero sentiments and emojis. (For reducing the file size)
+For a purpose of time and space efficieny on the `elastic-search` database, we pre-processed our dataset locally. 
+- **daily_average_sentiment.json**: Calculated the average sentiment for each day.
+- **daily_tweets.json**: Total number of tweets for each day.
+- **busiest_day_data_sample**: Randomly sampled 6,000 tweets out of approximately 180,000 tweets on the busiest day(has the most tweets).
+- **quietest_day_data**: With around 5,060 tweets on the quietest day(has the fewest tweets).
+- **viccrime_twitter.json**: Containing the number of crime cases reported for the selected dates(allign with the dates we are interested)
 
 ## Analysis Scenarios
 
