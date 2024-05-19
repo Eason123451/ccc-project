@@ -22,44 +22,16 @@ df_crime.drop('Reported Date per day', axis=1, inplace=True)  # Drop the origina
 df_crime.rename(columns={'Sum of Offence count': 'Crime_Count'}, inplace=True)
 
 def plot_crime_sentiment_url():
-    # Merging datasets on 'Date'
     data_merged = pd.merge(df_sentiment, df_crime, on='Date', how='inner')
-
-    # Plotting
-    # Calculate Pearson correlation coefficient
     correlation = data_merged['Crime_Count'].corr(data_merged['Sentiment'])
-
-    # Create a scatter plot with a regression line
+    
     plt.figure(figsize=(10, 6))
-    sns.regplot(x='Crime_Count', y='Sentiment', data=data_merged, scatter_kws={'alpha':0.5}, line_kws={'color':'red'}, label=f'Correlation: {correlation:.2f}')
-
+    ax = sns.regplot(x='Crime_Count', y='Sentiment', data=data_merged, scatter_kws={'alpha':0.5}, line_kws={'color':'red'})
+    
+    # Add a legend with the correlation
+    plt.legend(title=f'Correlation: {correlation:.2f}')
     plt.title('Correlation between Crime Reports and Daily Average Sentiment')
     plt.xlabel('Crime Reports')
     plt.ylabel('Average Sentiment')
     plt.grid(True)
     plt.show()
-
-    # Prepare the independent variable (X) and dependent variable (y)
-    X = data_merged['Crime_Count']  # Now Crime_Count is the predictor
-    X = sm.add_constant(X)  # Adds a constant term to the predictor
-    y = data_merged['Sentiment']  # Sentiment is now the response variable
-
-    # Fit the linear regression model
-    model = sm.OLS(y, X).fit()
-
-    # Plotting the observed data
-    plt.figure(figsize=(10, 6))
-    plt.scatter(data_merged['Crime_Count'], data_merged['Sentiment'], color='blue', label='Observed data')
-
-    # Plotting the regression line
-    plt.plot(data_merged['Crime_Count'], model.predict(), color='red', label='Fitted line')
-
-    # Adding labels and title
-    plt.xlabel('Crime Reports')
-    plt.ylabel('Average Sentiment')
-    plt.title('Linear Regression Between Crime Reports and Daily Average Sentiment')
-    plt.legend()
-
-    # Show the plot
-    plt.show()
-
