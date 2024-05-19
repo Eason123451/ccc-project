@@ -1,7 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-import statsmodels.api as sm
 from get_url_data import get_url_data
 import numpy as np
 from scipy.stats import norm
@@ -75,7 +74,7 @@ pd.set_option('display.max_colwidth', None)
 def sample_crime_quietest_tweets():
     sample_tweets = df_quietest_day.sample(n=5, random_state =  None) 
     sample_tweets['Sentiment'] = sample_tweets['Sentiment'].round(3)
-    
+
     # Drop the 'is_crime_related' column to avoid redundancy
     sample_tweets.drop('is_crime_related', axis=1, inplace=True)
 
