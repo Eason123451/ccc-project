@@ -29,6 +29,9 @@ This analysis presents the relationship between daily tweet volumes and average 
 #### Conclusion
 The dual tracking of sentiment and tweet volume offers insights into public mood and engagement, useful for understanding reactions to events and guiding strategic responses.
 
+#### The Busiest and The Quietest Day
+We found that the busiest day is corresponding with the lowest average sentiment, and the quietest day is corresponding with the highest average sentiment. So we pick these two days to be further investigated.
+
 ### Scenario 2: Sentiment Distribution on Busiest and Quietest Days
 
 ![Scenario 2](/output_images/Scenario_2.png)
