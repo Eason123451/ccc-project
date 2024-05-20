@@ -7,7 +7,7 @@
   - `filter_data.py`
   - `filter.slurm`
 - **tweets_cleaned.csv**: Cleaned to remove zero sentiments and emojis. (For reducing the file size)
-For a purpose of time and space efficieny on the `elastic-search` database, we pre-processed our dataset locally. 
+For a purpose of time and space efficieny on the `elastic-search` database, in terms of storage and transmission, we pre-processed our dataset locally. 
 - **daily_average_sentiment.json**: Calculated the average sentiment for each day.
 - **daily_tweets.json**: Total number of tweets for each day.
 - **busiest_day_data_sample**: Randomly sampled 6,000 tweets out of approximately 180,000 tweets on the busiest day(has the most tweets).
@@ -110,3 +110,17 @@ The sampled tweets provide insights into public opinion and sentiment trends rel
 
 #### Conclusion
 By executing these functions, users can quickly gather examples of public sentiment on crime-related issues from specific days, which is invaluable for research, reporting, or further analysis in social science and digital humanities.
+
+
+# Testing Documentation
+
+## Unit Tests for Data Fetching
+
+### Objective
+Verify that `get_url_data` function correctly fetches data from the API.
+
+### Test Cases
+- **Success Test**: Provide a valid port and endpoint; expect the function to return data without errors.
+- **Failure Test**: Provide an invalid port or endpoint; expect the function to handle errors gracefully, possibly by returning `None` or raising an informative exception.
+
+## Integration Tests for Data Processing Functions
