@@ -4,6 +4,7 @@ import string
 from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize
 import nltk
+nltk.download('punkt')
 
 def get_mastodon_data(port,size):
     fission_url = f"http://localhost:{port}/mastodon/{size}"
