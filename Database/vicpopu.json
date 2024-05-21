@@ -1,0 +1,86 @@
+{
+    "vicpopu": {
+      "mappings": {
+        "_meta": {
+          "created_by": "file-data-visualizer"
+        },
+        "properties": {
+          " lga_code": {
+            "type": "long"
+          },
+          " lga_name": {
+            "type": "keyword"
+          },
+          " tpop_2011": {
+            "type": "long"
+          },
+          " tpop_2012": {
+            "type": "long"
+          },
+          " tpop_2013": {
+            "type": "long"
+          },
+          " tpop_2014": {
+            "type": "long"
+          },
+          " tpop_2015": {
+            "type": "long"
+          },
+          " tpop_2016": {
+            "type": "long"
+          },
+          " tpop_2017": {
+            "type": "long"
+          },
+          " tpop_2018": {
+            "type": "long"
+          },
+          " tpop_2019": {
+            "type": "long"
+          },
+          " tpop_2020": {
+            "type": "long"
+          },
+          " tpop_2022": {
+            "type": "long"
+          },
+          " tpop_2023": {
+            "type": "long"
+          },
+          " tpop_2024": {
+            "type": "long"
+          },
+          " tpop_2025": {
+            "type": "long"
+          },
+          " tpop_2026": {
+            "type": "long"
+          },
+          " tpop_2027": {
+            "type": "long"
+          },
+          " tpop_2028": {
+            "type": "long"
+          },
+          " tpop_2029": {
+            "type": "long"
+          },
+          " tpop_2030": {
+            "type": "long"
+          },
+          " tpop_2031": {
+            "type": "long"
+          },
+          " vifsa_code": {
+            "type": "keyword"
+          },
+          " vifsa_name": {
+            "type": "keyword"
+          },
+          "tpop_2021": {
+            "type": "long"
+          }
+        }
+      }
+    }
+  }

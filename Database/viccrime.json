@@ -1,0 +1,38 @@
+{
+    "viccrime": {
+      "mappings": {
+        "_meta": {
+          "created_by": "file-data-visualizer"
+        },
+        "properties": {
+          "Local Government Area": {
+            "type": "keyword"
+          },
+          "Offence Count": {
+            "type": "long"
+          },
+          "Offence Division": {
+            "type": "keyword"
+          },
+          "Offence Subdivision": {
+            "type": "text"
+          },
+          "Offence Subgroup": {
+            "type": "text"
+          },
+          "Postcode": {
+            "type": "long"
+          },
+          "Suburb/Town Name": {
+            "type": "keyword"
+          },
+          "Year": {
+            "type": "long"
+          },
+          "Year ending": {
+            "type": "keyword"
+          }
+        }
+      }
+    }
+  }

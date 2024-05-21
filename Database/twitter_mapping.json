@@ -1,0 +1,24 @@
+{
+    "twitter": {
+      "mappings": {
+        "_meta": {
+          "created_by": "file-data-visualizer"
+        },
+        "properties": {
+          "@timestamp": {
+            "type": "date"
+          },
+          "sentiment": {
+            "type": "double"
+          },
+          "text": {
+            "type": "text"
+          },
+          "time": {
+            "type": "date",
+            "format": "iso8601"
+          }
+        }
+      }
+    }
+  }

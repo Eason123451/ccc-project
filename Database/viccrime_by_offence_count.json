@@ -1,0 +1,20 @@
+{
+    "viccrime_by_offence_count": {
+      "mappings": {
+        "_meta": {
+          "created_by": "file-data-visualizer"
+        },
+        "properties": {
+          "Offence Division: Descending": {
+            "type": "keyword"
+          },
+          "Sum of Offence Count": {
+            "type": "keyword"
+          },
+          "filters": {
+            "type": "long"
+          }
+        }
+      }
+    }
+  }

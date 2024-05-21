@@ -1,0 +1,20 @@
+{
+    "viccrimegov": {
+      "mappings": {
+        "_meta": {
+          "created_by": "file-data-visualizer"
+        },
+        "properties": {
+          "Local Government Area: Descending": {
+            "type": "keyword"
+          },
+          "Sum of Offence Count": {
+            "type": "keyword"
+          },
+          "filters": {
+            "type": "long"
+          }
+        }
+      }
+    }
+  }
