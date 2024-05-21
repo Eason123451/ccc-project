@@ -1,0 +1,16 @@
+transformers
+requests
+nltk
+pandas
+matplotlib
+seaborn
+numpy
+scipy
+IPython
+scikit-learn
+pygwalker
+folium
+geopy
+certifi
+ssl
+torch
