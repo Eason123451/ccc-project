@@ -1,0 +1,27 @@
+{
+    "crime": {
+      "mappings": {
+        "_meta": {
+          "created_by": "file-data-visualizer"
+        },
+        "properties": {
+          "@timestamp": {
+            "type": "date"
+          },
+          "Offence Level 3 Description": {
+            "type": "keyword"
+          },
+          "Offence count": {
+            "type": "double"
+          },
+          "Postcode": {
+            "type": "long"
+          },
+          "Reported Date": {
+            "type": "date",
+            "format": "iso8601"
+          }
+        }
+      }
+    }
+  }

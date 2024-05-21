@@ -1,0 +1,27 @@
+{
+    "average_sentiment": {
+      "mappings": {
+        "_meta": {
+          "created_by": "file-data-visualizer"
+        },
+        "properties": {
+          "@timestamp": {
+            "type": "date"
+          },
+          "Average sentiment": {
+            "type": "double"
+          },
+          "Total count": {
+            "type": "keyword"
+          },
+          "filters": {
+            "type": "keyword"
+          },
+          "time per day": {
+            "type": "date",
+            "format": "iso8601"
+          }
+        }
+      }
+    }
+  }

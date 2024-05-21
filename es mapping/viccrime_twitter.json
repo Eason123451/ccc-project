@@ -1,0 +1,17 @@
+{
+    "quietest_day_data": {
+      "mappings": {
+        "_meta": {
+          "created_by": "file-data-visualizer"
+        },
+        "properties": {
+          "Sentiment": {
+            "type": "double"
+          },
+          "Text": {
+            "type": "text"
+          }
+        }
+      }
+    }
+  }

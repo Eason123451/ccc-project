@@ -1,0 +1,1443 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\usepackage[normalem]{ulem}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+
+\hypertarget{introduction}{%
+\section{1. Introduction}\label{introduction}}
+
+In recent years, concerns about crime have been increasing in Australia.
+Our project
+
+\hypertarget{section}{%
+\section{\texorpdfstring{\hfill\break
+}{ }}\label{section}}
+
+\hypertarget{system-architecture-and-design}{%
+\section{\texorpdfstring{\textbf{2. System Architecture and
+Design}}{2. System Architecture and Design}}\label{system-architecture-and-design}}
+
+\hypertarget{mrc}{%
+\subsection{\texorpdfstring{\textbf{2.1 MRC}}{2.1 MRC}}\label{mrc}}
+
+The Melbourne Research Cloud (MRC) operates as a private cloud, offering
+Infrastructure-as-a-Service (IaaS) to researchers at the University of
+Melbourne. It provides them with on-demand access to a powerful suite of
+virtualized computing resources, including servers and storage. This
+service enables researchers to swiftly obtain scalable computational
+power as their research needs expand, eliminating the need to invest
+significant time and money in establishing their own computing
+infrastructure.
+
+We are allocated with 5 servers (instances) with 9 virtual CPUs (40.5GB
+memory total) on the Melbourne Research Cloud. What's more, we are
+allowed to create a maximum of up to 700 volumes for the instances and
+the total storage space for these volumes is 700GB. We will use these
+given cloud resource to build our system for the scenarios as shown in
+the figure below:
+
+The whole project is deployed by leveraging the Unimelb MRC platform.
+And we will discuss the pros and cons of the Unimelb MRC.
+
+\hypertarget{advantages-of-mrc}{%
+\subsubsection{\texorpdfstring{\textbf{2.1.1 Advantages of
+MRC}}{2.1.1 Advantages of MRC}}\label{advantages-of-mrc}}
+
+\hypertarget{costs}{%
+\paragraph{\texorpdfstring{\textbf{2.1.1.1
+Costs}}{2.1.1.1 Costs}}\label{costs}}
+
+Cost is a major advantage of using the UniMelb Research Cloud. Firstly,
+there are no hardware costs, which saves us the high initial investment
+required for an on-premise infrastructure. Secondly, it reduces our
+administrative burden since we don\textquotesingle t have to pay for
+electricity or daily maintenance. Additionally, the cloud services
+provided by MRC are free, eliminating service fees for our project. This
+makes it a more cost-effective option compared to expensive services
+from popular cloud service providers like AWS and Azure
+
+\hypertarget{security}{%
+\paragraph{\texorpdfstring{\textbf{2.1.1.2
+Security}}{2.1.1.2 Security}}\label{security}}
+
+Security is a major advantage of using the UniMelb Research Cloud.
+Firstly, high-level security is achieved because the cloud resources are
+dedicated to our group. We can create a bastion node for building the
+SSH tunnel to meet our security so that external users can only access
+the MRC with encrypted key pairs through the Uni VPN and it can be used
+to call remote service by using localhost port number. Secondly, we can
+customise security group settings. This includes designing port usage
+for each instance by adjusting security group rules, which enhances the
+security of our cloud instances, although we only use the default ports
+in the installation guide.
+
+\hypertarget{convenience}{%
+\paragraph{\texorpdfstring{\textbf{2.1.1.3
+Convenience}}{2.1.1.3 Convenience}}\label{convenience}}
+
+MRC Dashboard which allows the person with no background knowledge to
+create a cluster without any problems. Firstly, it provides some
+prepared flavours, images, volumes and so on, which is user-friendly to
+create the cluster with zero problems. Secondly, it supports openstack
+CLI client and is also convenient to create the cluster through the
+command line by following the installation guide, which saves lots of
+time for cluster creation and deployment.
+
+\hypertarget{disadvantage-of-mrc}{%
+\subsubsection{\texorpdfstring{\textbf{2.1.2 Disadvantage of
+MRC}}{2.1.2 Disadvantage of MRC}}\label{disadvantage-of-mrc}}
+
+\hypertarget{availability}{%
+\paragraph{\texorpdfstring{\textbf{2.1.2.1
+Availability}}{2.1.2.1 Availability}}\label{availability}}
+
+Some availability issues can be one major disadvantage for using the
+UniMelb Research Cloud. Firstly, the MRC is 24 hours and 7 days per week
+accessible within and outside The University of Melbourne, or anywhere
+in the world. It still has the possibility that it cannot login into the
+MRC. As you can see on the Ed discussion, some groups may meet MRC
+problems due to cinder issues, which can affect their user experience of
+the MRC. Secondly, we need to use VPN to connect from outside of the
+university network which can cause network issues.
+
+\hypertarget{summary-of-the-mrc}{%
+\subsubsection{\texorpdfstring{\textbf{2.1.3 Summary of the
+MRC}}{2.1.3 Summary of the MRC}}\label{summary-of-the-mrc}}
+
+Overall, although MRC itself has potential availability issues and the
+need for a VPN to access the cloud from outside the university network,
+MRC still offers significant advantages such as cost savings, enhanced
+security with dedicated resources, customizable security settings, and
+user-friendly tools for cluster creation.
+
+\hypertarget{kubernetes}{%
+\subsection{\texorpdfstring{\textbf{2.2
+Kubernetes}}{2.2 Kubernetes}}\label{kubernetes}}
+
+Kubernetes, often abbreviated as K8s, is an open-source container
+orchestration platform that automates the deployment, scaling, and
+management of containerized applications. Kubernetes helps manage
+clusters of containers, ensuring that they run efficiently and are
+highly available. Openstack CLI client provides a convenient way to
+create a k8s cluster through the command line so that it saves us lots
+of time for cluster creation. We created an elastic search cluster with
+one master node and three working nodes. In these three working nodes, 2
+of them for Elasticsearch and 1 for Kibana.
+
+\hypertarget{security-1}{%
+\subsubsection{\texorpdfstring{\textbf{2.2.1
+Security}}{2.2.1 Security}}\label{security-1}}
+
+Kubernetes provides robust security features, including role-based
+access control (RBAC). Our cluster admin created several certificates
+for each group member so that only the people who added the certificate
+to the cluster can access the cluster, which improves the security of
+the cluster.
+
+According to the installation guide. The cluster admin used openstack
+CLI to create the config files and change the IP address to localhost
+127.0.0.1. The reason for changing the IP address is because we need to
+use the local IP address to send requests to the bastion node first,
+which will then access the remote cluster services. After each group
+member puts these files under the /.kube/config, they have access to the
+Kubernetes cluster and check all the nodes in the cluster by using
+command \emph{kubectl get nodes}
+
+\hypertarget{self-healing}{%
+\subsubsection{\texorpdfstring{\textbf{2.2.2
+Self-Healing}}{2.2.2 Self-Healing}}\label{self-healing}}
+
+Kubernetes constantly monitors the health of nodes and pods. It replaces
+or restarts containers that fail, reschedules containers when nodes die,
+and kills containers that don't respond to user-defined health checks,
+ensuring applications remain in a healthy state without manual
+intervention\hspace{0pt}
+
+Once the nodes and all the necessary services have been successfully
+deployed, the pods within these nodes will start utilising the node
+resources such as CPU and memory to complete their tasks. Sometimes,
+when we log into Kibana to transmit data, we might encounter errors like
+"500 Internal Server Error", but after a short time, it goes back to
+normal. Our initial assumption was that this might be due to excessive
+resource usage on a particular node, which sometimes causes the node to
+crash. The node\textquotesingle s status will show as "not ready," as
+shown in the following image.
+
+At this point, we need to attempt to inspect the status of the pods
+within the failed node, and we will find that many of the pods show a
+status of "terminating." (Figure)
+
+Due to the inherent fault-recovery capabilities of Kubernetes, combined
+with the fact that we previously created three worker nodes during
+deployment (two nodes for Elasticsearch and one node for Kibana),
+Kubernetes will automatically restart these pods after a short wait. It
+will then reschedule these pods to available nodes, restart the failed
+node, and rebalance the pods. After waiting for a short while and
+logging back into the cluster, all services will be running normally,
+demonstrating Kubernetes\textquotesingle{} ability to self-heal and
+ensure service continuity.
+
+\hypertarget{elasticsearch}{%
+\subsection{2.3 ElasticSearch}\label{elasticsearch}}
+
+Elasticsearch is an inverted index database renowned for its high-speed
+data retrieval capabilities. It excels in handling structured,
+unstructured, and semi-structured data efficiently. By deploying
+Elasticsearch on Kubernetes (K8s), we can leverage its powerful querying
+capabilities to access and manage our data. Whether through full-text
+search, complex queries, or aggregations, Elasticsearch offers a robust
+for real-time data processing and analysis.
+
+\hypertarget{upload-test-file-in-elasticsearch}{%
+\subsubsection{2.3.1 Upload test file in
+ElasticSearch}\label{upload-test-file-in-elasticsearch}}
+
+We can upload the file through Kibana.Our topic is the relation among
+crime, sentiment and the population size. However Kibana has a limited
+upload size requirement. Since the twitter file that we utilised to
+analyse sentiment is over 100MB, We met some problems on loading them
+into the dataset. In order to address these problems and since it is the
+first we upload them into the elastic search database, we decided to
+create a test file containing a few lines of code from the original file
+as a test set.
+
+After performing an operation to overwrite the time format, we
+successfully uploaded the data set and named its index twitter. We found
+that after we uploaded the test data, the index was automatically
+created and had the corresponding settings and content as follows.
+
+We found that each twitter has a row with a corresponding id, rather
+than the uploaded files sharing one id, so even if the file is divided
+into 4 parts and uploaded separately, as long as the content is in the
+same format, it can be put into one index. However, since we did not
+give each column a name and did not use headline when uploading it as a
+test machine, we need to delete it first and upload it again
+
+\hypertarget{delete-index}{%
+\subsubsection{2.3.2 Delete index}\label{delete-index}}
+
+Since we want to resubmit the data, we need to delete the index(which
+includes the context of this index). We used the curl code to delete it
+in the command line. -u represents identity authentication and then
+enters our account password. Our password was a 36-bit garbled code that
+improved security. However, we encountered an SSL certificate error
+during the first attempt.
+
+We found that adding -k to ignore ssl authentication can solve the
+problemSince our document size is 500+MB and the upload limit of kibana
+is 100MB, we use a python file to divide the csv document into six equal
+parts.
+
+\hypertarget{reupload-the-files}{%
+\subsubsection{2.3.3 Reupload the files}\label{reupload-the-files}}
+
+Now we start to re-upload 6 files. This time we write column names for
+each of their columns and upload them to the twitter index. Our data has
+the first column representing time, the second column representing
+sentiment, and the third column representing text, so the column names
+are set to the corresponding names
+
+Next, I want to upload the second data in the same way, but I find that
+the same upload file intersection can only create a new index to upload,
+which does not meet my original intention.
+
+So I looked for a solution to use a python file to get the address and
+then upload it. But first I wanted to try if I could use python to
+connect to the Elasticsearch client. So I wrote a file to get the
+health, but it kept reporting an error. No matter how I modified it, it
+couldn\textquotesingle t connect.
+
+After some investigation, I thought that it might be because Python was
+run through cmd, not the wsl subsystem, so it had not been sourced and
+therefore could not establish a connection. So I ran this python file on
+Ubuntu and successfully got the result
+
+Next, I will write the python file for uploading. My code is written
+like this, but it quickly gave me an error that it could not read the
+file that existed on the Windows system. So I decided to transfer the
+file to the subsystem and modify my python code.
+
+used the copy command to move it to home/yesheng yao and checked to
+confirm that it was in it. At this time, we modified our read path and
+ran it again.
+
+The file was successfully run, but after running for a long time, an
+error was reported. The error result is as follows.
+
+After analysis, I think it is because the size of the uploaded file is
+too large, so it times out. Therefore, I changed the bulk. I cut it into
+100 pieces and uploaded them. This time I added logging while running
+the cod and run the results synchronously with this code
+
+The operation was successful. Now we use the command to check the number
+and we find that the count has increased from 734796 to 882896.
+
+We found that the number he uploaded seemed wrong. It should be around
+70,000. This might be a mistake, but he only uploaded 150,000. We need
+to re-import the data. Before that, we need to modify our code first so
+that there will be no error in the next import.This time we increased
+the chunksize to 1000.
+
+I re-ran it and found that it stopped after running for 10 seconds.After
+checking, the count only increased by 1000. We can see from the log that
+it was interrupted due to connection timeout.This time we increased the
+read time in the server settings,
+
+This time, after we modified it, we found that the data had increased by
+more than 70,000 items, indicating success. From then on, we can delete
+the index first, recreate it, and re-upload it to obtain all the data
+without duplication and error.
+
+When we finally upload all the files, we can see that there are more
+than 420,000 files.We uploaded our other datasets in the same way. This
+completes the upload of the data set.
+
+\hypertarget{calling-the-database}{%
+\subsubsection{2.3.4 Calling the database}\label{calling-the-database}}
+
+First, we want to use sentiment and date as icons on the front end, so I
+wrote a python method that can call the sentiment and date in the
+database. The code is as follows: After connecting to the server,
+request data.
+
+I found that when I ran it in wsl, it took a long time to run without
+any results. This was because it had to return a lot of values.
+Therefore, after discussing with my team members, I changed direction
+and decided to search in the elastic client first and then return the
+search results to the front end.
+
+Hence, I created a view about the average sentiment of each day in the
+same way as before and used a json file to get the view. This is part of
+it. It was successfully displayed, but I found a problem. When I
+returned to the homepage and clicked the view file again, its timestamp
+would be reset. So although I wrote a python file to get the sentiment
+through the view, I finally decided to download the csv first and then
+re-upload it to make the index. Not only that, I added some data after
+communicating with my former teammates.
+
+I classified sentiment greater than 0 and less than 0 and made three
+tables showing the average sentiment greater than 0, the average
+sentiment less than 0 and the average sentiment equal to 0. I downloaded
+it to csv and uploaded it to a new index average\_sentiment so that we
+don't need to call the data and recalculate it when the front-end is
+running. We can directly calculate the existing data.
+
+At this time, we just need to call the index of the new index again to
+return the json file to the front-end analysis. Therefore, I made a
+python file to call the data on the index. Note that get returns 10 data
+by default, so we need to use the scroll function instead. Finally, it
+runs successfully and gets a json file like this. We need to pack them
+by fission later, and we still download the json file first, because it
+could help teammates to do their part first.
+
+We continue to process other data using this method and then upload all
+the required data we need, and create corresponding python files to
+download the json files for every topic we want to analyse, and finally
+end the elastic search part.
+
+\hypertarget{pros-and-cons-of-elasticsearch}{%
+\subsubsection{2.3.5 Pros and cons of
+ElasticSearch}\label{pros-and-cons-of-elasticsearch}}
+
+Pros:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \begin{quote}
+  Elasticsearch uses inverted indexes which support efficient full-text
+  search capabilities. This feature is particularly obvious when I
+  analyse twitter data. We could get the average sentiment during a
+  certain period in a second through kibana.
+  \end{quote}
+\item
+  \begin{quote}
+  At the same time, elasticsearch supports fuzzy search and absolute
+  search. We can search for the text include some crime words or search
+  for the sentiment which is absolutely 0
+  \end{quote}
+\end{enumerate}
+
+Cons:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \begin{quote}
+  The problem with Elasticsearch is that it does not support big data
+  upload.
+  \end{quote}
+\item
+  \begin{quote}
+  When we return big data to the previous period, it will take a long
+  time.
+  \end{quote}
+\item
+  \begin{quote}
+  If the system fails and the node crashes, the fault repair time will
+  be very long.
+  \end{quote}
+\end{enumerate}
+
+\hypertarget{fission}{%
+\subsection{\texorpdfstring{\textbf{2.4
+Fission}}{2.4 Fission}}\label{fission}}
+
+Fission is a Kubernetes-native serverless framework designed to enable
+the deployment and management of functions as services (FaaS) without
+managing the underlying server infrastructure. It allows developers to
+write short-lived functions that can be triggered by events, HTTP
+requests, or other triggers, and it abstracts the complexity of server
+management.
+
+\hypertarget{backend-architecture}{%
+\subsubsection{\texorpdfstring{\textbf{2.4.1 Backend
+Architecture}}{2.4.1 Backend Architecture}}\label{backend-architecture}}
+
+According to the picture below, we use fission as listed in the
+installation guide for the application backend. We created timers for
+fetching the real-time data from the external source, which in this case
+is only Mastodon. We created routes for each of the functions so that
+these routes can be used for front end http requests (Jupyter Notebook)
+to start running event-driven functions. These functions include codes
+with Elastic search query and return the search result from the
+Elasticsearch. As you can see, except for Mastodon, we finally decided
+to upload other external sources data to the Elasticsearch using Kibana
+UI. The reason for that is because most of our data is directly obtained
+from the website, which is supposed to be static data and it is easy to
+upload after we create the index in Elasticsearch. We cut the dataset by
+filtering some useful information after we downloaded the data. Then we
+did some data processing locally and split data into several batches
+before we put them into the Elasticsearch.
+
+Original picture can be found here
+
+\hypertarget{restful-api}{%
+\subsubsection{\texorpdfstring{\textbf{2.4.2 Restful
+API}}{2.4.2 Restful API}}\label{restful-api}}
+
+We create several routes that can be used for front end HTTP requests.
+Due to the scope of our project, we only use the get method. However,
+our routes still follow the style of Restful API that uses a uniform
+interface, leveraging standard HTTP methods for operations, making the
+API simple and intuitive to use. Because RESTful APIs are stateless and
+each request can be handled independently, the system can be more easily
+horizontally scaled. When the project scope increases, we can add more
+standard HTTP methods (such as PUT, POST, DELETE) to handle requests as
+needed, improving system performance and availability.
+
+(You can find the route list in the Readme file under the Backend
+package for detailed information)
+
+\hypertarget{functionalities}{%
+\subsubsection{\texorpdfstring{\textbf{2.4.3
+Functionalities}}{2.4.3 Functionalities}}\label{functionalities}}
+
+Our functions include codes with Elastic search query and return the
+search result from the Elasticsearch. However, as we mentioned above,
+our project scope is not complicated, therefore most of the functions
+only return the whole data under the ElasticSearch without any search
+filtering and we process most of the data at the front end.
+
+(You can find the function list in the Readme file under the Backend
+package for detailed information)
+
+\hypertarget{future-improvement}{%
+\subsubsection{\texorpdfstring{\textbf{2.4.4 Future
+improvement}}{2.4.4 Future improvement}}\label{future-improvement}}
+
+Kafka can handle large volumes of data with low latency, making it
+suitable for applications that require real-time data processing.
+
+A Message Queue is a form of asynchronous service-to-service
+communication used in serverless and microservices architectures. It
+allows messages (data, requests, or events) to be sent between services
+without requiring the services to be simultaneously available.
+
+Based on our data source and project scope, we did not apply the kafka
+cluster and message queue in our project. However, if we can find more
+comprehensive and more real-time data, we will use the combination of
+these two to build a more complicated application.
+
+\hypertarget{section-1}{%
+\section{}\label{section-1}}
+
+\hypertarget{system-functionality-and-scenarios}{%
+\section{3. System Functionality and
+Scenarios}\label{system-functionality-and-scenarios}}
+
+\hypertarget{mastodon}{%
+\subsection{3.1 Mastodon}\label{mastodon}}
+
+We want to get real-time data from the Mastodon. We modified the example
+codes and changed the password to the elastic search and set sleep time
+to 30s to get the data and then print the result with Json format and
+find that the data as listed below:
+
+\includegraphics[width=5.08854in,height=1.76288in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image37.png}
+
+\emph{Figure 3.1.1}
+
+From the picture, it is obvious that it consists of different attributes
+such as the toot created time and content. What we want is just to make
+a scenario that when we ask for http request, the data would be fetched
+from the elastic search. However, there are several problems:
+
+The first one is what kind of data we should use. We thought one idea is
+to only fetch the toot created time, username and toot content. Since
+this is related to our crime topic, therefore we can show the real-time
+information about the crime in Australia.
+
+We found that the date from the created\_at attribute is a UTC time
+which does not align well with the local time. So, we change to local
+time by using pytz library. Another problem is that the data in the
+content attribute consists of lots of HTML tags. Therefore, we use
+BeautifulSoup to make the pure context with only the p tag. After simple
+format cleaning we then put the data to the elasticsearch.
+
+The second problem is the number of toots published for each period is
+unpredictable, so that we must decide how to keep a certain amount of
+data and keep the whole toot set to be relatively the latest. The
+easiest way is to set a timer, by creating a timer with fission. We
+tested several combinations of the fetching time with the mastodon last
+id mechanism and timer which is a switch to periodically run the
+function. And we finally decided to set a timer to run the function
+every 5 minutes. And then, we created another function for deleting the
+old data in the elastics search for maintaining the health of the
+elastic search nodes. Then we set a timer with another function to
+delete the old data each day at mid-night so that when asking for https
+requests, it would always return the latest data in the day. However,
+when we checked the elasticsearch data and found that there is so much
+data that has been deleted, even the time is not midnight. Then, we
+realised that the cron format may align with the Linux time, not the
+local time. Therefore, we then set the linux time to the local time. And
+after that, this problem has been solved.
+
+The third problem is that we may request a small piece of the data from
+the elasticsearch, otherwise requesting for the whole data is probably
+time-consuming in this case. Therefore, we create a route that receives
+a size parameter which can be used to request for a certain amount of
+data, controlling the data input. When we successfully implemented this
+functionality, we found the data is not the latest now. The reason
+behind is that we did not sort data in the descending order. Then we add
+the conditions to sort the data in a descending order based on
+created\_at field in the data. If the value of this attribute is the
+same, then we used the secondary sorting to compare their ids to avoid
+this case.
+
+We obtain real-time data from Mastodon and then retrieve the content to
+check for any criminal related content, and extract and display them.
+
+3.1.1 Keyword Search
+
+At first, we decided to use keyword search, we made a list of keywords
+related to crime.But many of the posts filtered out by this method are
+not related to crime. Then we updated the search method to ensure that
+punctuation is removed from the content and that keywords are matched as
+whole words. For instance, the keyword "crime" will match "crime" but
+not "crimes" or "criminal". The optimized method works better to filter
+the posts related to crime by displaying better outputs.
+
+3.1.2 Scikit Learn
+
+Meanwhile, we would like to know if there is a way to automatically
+classify based on content. We found a way to deploy a scikit-learn
+machine learning model. We first manually indicated the classification
+of 5 posts for training, and then provided 3 unrelated posts for
+prediction.
+
+The performance of the scikit-learn model is very poor. It can only
+classify text into categories that have appeared in training and cannot
+classify text into categories that have not appeared in training. This
+scikit-learn model requires us to manually classify the content. Due to
+the uncertainty of training data size, it may consume a lot of time and
+not achieve good results.
+
+3.1.3 Zero-Shot Classification
+
+We tried another pre-trained model to select the contents related to
+crime. The zero-shot classification evaluates each content and each
+content is scored based on relevancy. A good threshold must be set to
+ensure this classification performs good.
+
+3.1.4 Pre-trained Scikit Learn
+
+Later, we tried the scikit learn model again by loading pre-trained
+TF-IDF vectorizers and classifier models. At first, not a single content
+was filtered out of 10000 obtained posts. We expanded the pre trained
+dataset and keywords used, the result is still not ideal, not a single
+piece of content has been filtered out. As the keyword search results
+are very good, we did not choose machine learning classification
+methods.
+
+3.1.5 Pre-trained BERT
+
+However, we found some machine learning models that can classify
+emotions. Firstly, we tried a pre-trained BERT model, there are
+pre-trained databases for BRET. The BERT model can T perceive emotions
+based on contents and classify them into predetermined levels. But the
+BERT model also requires fine-tuning of model parameters to achieve
+ideal results.
+
+3.1.6 Pre-trained Transformers
+
+We chose a pre-trained transformers model. This model can divide content
+into positive and negative content, while outputting a confidence level.
+Because we also have research on sentiments, the model\textquotesingle s
+dichotomy of content also corresponds to the positive and negative
+sentiments in Twitter data. So we choose this transformers model to test
+the emotion for each post on mastodon.
+
+3.1.7 Final implementation and Improvements
+
+In the end, we modified and integrated the code so that it can obtain,
+retrieve, and classify real-time data of a given size. The output result
+is also ideal.
+
+If we have enough time and effort to manually classify a large size of
+contents to provide enough training data for the scikit-learn model, we
+believe the scikit-learn model would perform better than keyword
+research. Due to the exaggerated techniques used by some posts, many
+contents containing crime related keywords may be related to crime.
+Meanwhile, more computer resources are also being occupied, and there is
+not really much room for improvement.
+
+\hypertarget{twitter}{%
+\subsection{\texorpdfstring{\textbf{3.2
+Twitter}}{3.2 Twitter}}\label{twitter}}
+
+\textbf{Overview}
+
+This scenario focuses on analysing Twitter sentiment data to understand
+public sentiment trends and their relationship with tweet volume and
+crime perception. The analysis spans various scenarios and uses
+pre-processed datasets to ensure efficient storage and transmission.
+
+\textbf{Data Preparation}
+
+The tweets data was retrieved from SPARTAN as desired. Given the size of
+the full dataset, a filter was applied using the
+\textquotesingle tag\textquotesingle{} element that contains
+"Australia-based" or "Australia-user." After extracting these lines, the
+fields \textquotesingle created\_at\textquotesingle,
+\textquotesingle sentiment\textquotesingle, and
+\textquotesingle text\textquotesingle{} were gathered and exported to a
+CSV file. This task used two scripts: "filter\_data.py" and
+"filter.slurm," and took approximately 30 seconds to complete using 2
+nodes and 16 cores on SPARTAN. As a result, the file
+\textquotesingle tweets\_100Gb\_filtered.csv\textquotesingle{} was 920.3
+MB.
+
+After downloading the output file from SPARTAN, we further reduced its
+size by removing rows with zero sentiment and all emojis from the text.
+The resulting file, "tweets\_cleaned.csv," is 580 MB and contains about
+4.3 million rows of tweets. However, the reduced file size was still
+considered an issue for transmission on "Elastic."
+
+We then designed the showcase topics for the Twitter scenario. By
+implementing the sub-scenarios locally, we developed the front-end
+dataset needed to display the showcase. Finally, the dataset focused on
+Australia-based tweets created from 2021-06-21 to 2021-07-31. These
+datasets were exported to JSON files, ranging in size from 2 KB to 783
+KB, which were ideal for storing on ``Elastic" and transmitting through
+``ElasticSearch''.
+
+\hypertarget{analysis-scenarios}{%
+\subsubsection{\texorpdfstring{\textbf{Analysis
+Scenarios}}{Analysis Scenarios}}\label{analysis-scenarios}}
+
+\hypertarget{scenario-1-daily-sentiment-and-tweet-volume-analysis}{%
+\paragraph{\texorpdfstring{\textbf{Scenario 1: Daily Sentiment and Tweet
+Volume
+Analysis}}{Scenario 1: Daily Sentiment and Tweet Volume Analysis}}\label{scenario-1-daily-sentiment-and-tweet-volume-analysis}}
+
+(Checking on Fig. 3.2.1) This analysis presents the relationship between
+daily tweet volumes and average sentiment scores over a period from June
+21, 2021, to July 31, 2021. We observed that peaks in tweet volume often
+coincide with drops in sentiment, suggesting that events triggering
+increased tweeting evoke strong emotional responses. Additionally, sharp
+changes in the graph may align with specific events, indicating public
+reaction intensity and engagement levels. We found that the busiest day
+corresponds with the lowest average sentiment, and the quietest day
+corresponds with the highest average sentiment. Therefore, we selected
+these two days for further investigation.
+
+\textbf{Scenario 2: Sentiment Distribution on The Busiest and Quietest
+Days}
+
+(Checking on Fig. 3.2.2) This analysis compares the distribution of
+sentiment scores on the busiest and quietest days, visualised through
+histograms and normal distribution fits. Both days exhibit roughly
+normal distributions, but the quietest day shows a slightly more
+positive skew compared to the busiest day. The busiest day tends to have
+a broader spread of sentiment scores, suggesting more varied reactions
+among tweets compared to the quietest day. This visual comparison
+highlights how public sentiment varies between days with high and low
+Twitter activity, potentially reflecting different public moods or
+events triggering these tweets.
+
+\textbf{Scenario 3: Correlation between Crime Reports and Sentiment}
+
+(Checking on Fig. 3.2.3) This analysis explores the correlation between
+daily crime reports and average sentiment scores from tweets. The red
+line represents the regression line, illustrating the trend in the data.
+Combined with a Pearson correlation coefficient of 0.33, it suggests
+that higher crime reports might be associated with days of slightly more
+positive sentiment, possibly reflecting increased public awareness and
+engagement. The purpose of this scenario is to understand how public
+sentiment on social media corresponds with crime dynamics, potentially
+aiding in community-focused strategies and public safety measures.
+
+\hypertarget{scenario-4-sampling-crime-related-tweets}{%
+\paragraph{\texorpdfstring{\textbf{Scenario 4: Sampling Crime-Related
+Tweets}}{Scenario 4: Sampling Crime-Related Tweets}}\label{scenario-4-sampling-crime-related-tweets}}
+
+(Checking on Fig. 3.2.4) This scenario demonstrates the functionality of
+dynamically sampling and displaying five tweets related to crime from
+the busiest and quietest days. Every time the functions
+`sample\_crime\_busiest\_tweets()' and
+`sample\_crime\_quietest\_tweets()' are called, they randomly select
+five crime-related tweets with sentiments from the two days,
+respectively. These functions are interesting because they can help in
+understanding how public reactions vary with the intensity of social
+media activity. By executing these functions, users can quickly gather
+examples of public sentiment on crime-related issues from specific days,
+which is invaluable for research, reporting, or further analysis in
+social science and digital humanities.
+
+\hypertarget{testing}{%
+\subsubsection{\texorpdfstring{\textbf{Testing}}{Testing}}\label{testing}}
+
+\begin{itemize}
+\item
+  \begin{quote}
+  Test Case 1: Verify that the ``get\_url\_data'' function correctly
+  fetches data from the API. We provide an invalid port or endpoint to
+  the function, expect the function to handle errors by raising an
+  informative exception.
+  \end{quote}
+\end{itemize}
+
+\hypertarget{challenge-and-improvement}{%
+\subsubsection{\texorpdfstring{\textbf{Challenge and
+Improvement}}{Challenge and Improvement}}\label{challenge-and-improvement}}
+
+\begin{itemize}
+\item
+  \begin{quote}
+  \uline{Scenario 1}: This scenario used two datasets, one containing
+  two columns\{``Date'', ``Sentiment''\}, the other containing two
+  columns\{``Date'', ``Number of Tweets''\}. We initially demonstrated
+  two plots of `Daily Average Sentiment Over Time' and `Daily Total
+  Tweets Over Time', respectively. Since these two plots share the same
+  x-axis, the Date, we combined them into one plot(Figure 3.2.1).
+  \end{quote}
+\item
+  \begin{quote}
+  \uline{Scenario 2}: This scenario used two datasets, both containing
+  two columns\{``Sentiment'', ``Text''\} for the busiest day and the
+  quietest day, respectively. As the two dataset of the two days have
+  distinct numbers of rows, we applied random sampling on the busiest
+  day for alignment with the quietest day. The original size of the
+  busiest day data containing about 170,000 rows was considered
+  time-consuming for transmission through `ElasticSearch', so we decided
+  to make a sample size of it.
+  \end{quote}
+\item
+  \begin{quote}
+  Scenario 3: We assumed that an increase in crime reports might
+  decrease the sentiment. Although the result shows a positive
+  relationship between the number of crime reports and the average
+  sentiment over time, the correlation between these two variables is
+  still low. We also conducted an analysis that went over the
+  "tweets\_cleaned.csv" file and filtered out tweets with crime-related
+  text, using keyword indicators from pandas. The average sentiment over
+  time was calculated, with the bag of keywords suggested by ChatGPT.
+  Similar correlation and linear regression analyses were applied to the
+  crime-related data. The result also showed a weak relationship between
+  crime reports and the crime-related average sentiment, with a p-value
+  above 0.05, suggesting that the relationship is not statistically
+  significant (Figure 3.2.5). The R-squared value is 0.094, indicating
+  that only about 9.4\% of the variability in sentiment can be explained
+  by the number of crime reports. This drew our interest to conduct some
+  qualitative analysis in Scenario 4.
+  \end{quote}
+\end{itemize}
+
+\includegraphics[width=3.41604in,height=1.48176in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image49.png}
+
+\emph{Fig. 3.2.}\emph{5}
+
+\begin{itemize}
+\item
+  \begin{quote}
+  Scenario 4: When we tried to directly print the five sample tweets,
+  the long text would be shortened with an apostrophe. To fully display
+  the full picture of the text, we used a package called IPython.display
+  that allows us to display the HTML with custom CSS for auto-adjusting
+  row heights. It looks pretty good (Figure 3.2.4).
+  \end{quote}
+\end{itemize}
+
+\hypertarget{crime-vs-population-victoria-and-south-australia}{%
+\subsection{\texorpdfstring{\textbf{3.3 Crime vs Population (Victoria
+and South
+Australia)}}{3.3 Crime vs Population (Victoria and South Australia)}}\label{crime-vs-population-victoria-and-south-australia}}
+
+\hypertarget{overview}{%
+\subsubsection{\texorpdfstring{\textbf{Overview}}{Overview}}\label{overview}}
+
+This scenario focuses on the relation between crime count and
+population. There are three sub scenarios in this scenario. The first
+sub scenario is to find the relationship between Victoria state crime
+count and population discussed among different crime Subdivisions
+
+\hypertarget{data-preparation}{%
+\subsubsection{\texorpdfstring{\textbf{Data
+Preparation}}{Data Preparation}}\label{data-preparation}}
+
+The data for the following three scenarios comprises crime or population
+statistics from either Victoria State or South Australia State. Crime
+data for both states is sourced from their respective official
+government websites, while population data for Victoria State is
+obtained from sudo. Unfortunately, population data for South Australia
+is unavailable on sudo. However, we\textquotesingle ve leveraged this
+limitation to develop a method for estimating population using crime
+counts for the South Australia scenario.
+
+For Victoria State, we\textquotesingle ve restricted the crime data to
+the years 2019 to 2023 to ensure greater validity for predictions,
+especially considering the impact of the recent pandemic. Additionally,
+we have two datasets stored on ElasticSearch categorised by crime
+subdivision and Local Government Area (LGA) for different sub-scenarios.
+The population data includes estimates for years beyond 2023,
+facilitating crime count predictions in subsequent scenarios, and it
+also includes LGA information for mapping.
+
+In the South Australia dataset, we\textquotesingle ve eliminated rows
+with null values. Since population data is unavailable,
+we\textquotesingle ve utilised the timestamp and crime count for
+analysis.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Vic Crime by LGA
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Vic Crime by Crime Subdivision
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Vic Population
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+South Australia Crime over Time
+\end{minipage} \\
+\begin{minipage}[b]{\linewidth}\raggedright
+Sub Scenario 1
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+√
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+√
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} \\
+\begin{minipage}[b]{\linewidth}\raggedright
+Sub Scenario 2
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+√
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+√
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} \\
+\begin{minipage}[b]{\linewidth}\raggedright
+Sub Scenario 3
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+√
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+√
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+√
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+Sub Scenario Data Table
+
+\hypertarget{analysis-scenario}{%
+\subsubsection{\texorpdfstring{\textbf{Analysis
+Scenario}}{Analysis Scenario}}\label{analysis-scenario}}
+
+\hypertarget{sub-scenario-1-the-relationship-between-victoria-crime-count-and-population-among-different-crime-subdivisions}{%
+\paragraph{\texorpdfstring{\textbf{Sub Scenario 1:} The Relationship
+Between Victoria Crime Count and Population Among Different Crime
+Subdivisions}{Sub Scenario 1: The Relationship Between Victoria Crime Count and Population Among Different Crime Subdivisions}}\label{sub-scenario-1-the-relationship-between-victoria-crime-count-and-population-among-different-crime-subdivisions}}
+
+This sub-scenario presents an analysis of the relationship between crime
+offence counts and population in Victoria, Australia. The data spans
+from 2019 to 2023, focusing on specific crime subdivisions. The function
+includes data processing, merging, and visualisation using various
+regression models to understand the trends and correlations between
+population and crime offences. A user input function allows the
+selection of a specific crime subdivision, including Crimes against the
+person, Property and deception offences, Drug offences, Public order and
+security offences, and Justice procedures offences. The user selects the
+desired subdivision, and the analysis is filtered accordingly.
+
+The relationship between offence counts and population was analysed
+using three regression models: Linear Regression, Polynomial Regression
+(degree 2), and Random Forest Regression. The Linear Regression model is
+a basic linear approach to understand the direct linear relationship
+between population and offence counts. The Polynomial Regression model,
+with a degree of 2, captures potential non-linear relationships, while
+the Random Forest Regression model is a more complex, non-linear
+approach that can capture intricate patterns in the data.
+
+Initially, we preprocess the Victoria state population and crime
+subdivision count data and merge them into a combined dataset. This
+combined dataset is then filtered based on the selected crime
+subdivision. Each regression model is trained on the filtered data, and
+predictions are generated using these trained models. The results are
+visualised with a scatter plot of the actual data and line plots for
+each regression model\textquotesingle s predictions. In the plot, the
+X-axis represents the population, and the Y-axis represents the sum of
+offence counts. The scatter plot shows the actual data of offence counts
+against the population, while the regression lines represent predictions
+from the linear, polynomial, and Random Forest models. This visual
+comparison helps to understand how each model fits the data, offering
+insights into the potential relationship between population growth and
+changes in crime offence counts.
+
+Two example graphs generated using this function are presented. The
+graph on the left shows information for crimes against the person, while
+the graph on the right shows data for drug offences. From these
+examples, it is evident that polynomial regression performs the best due
+to its flexibility and ability to handle a small amount of data
+effectively.
+
+\hypertarget{sub-scenario-2-population-and-crime-data-visualization-and-prediction-for-victorian-local-government-areas}{%
+\paragraph{\texorpdfstring{\textbf{Sub Scenario 2:} Population and Crime
+Data Visualization and Prediction for Victorian Local Government
+Areas}{Sub Scenario 2: Population and Crime Data Visualization and Prediction for Victorian Local Government Areas}}\label{sub-scenario-2-population-and-crime-data-visualization-and-prediction-for-victorian-local-government-areas}}
+
+This scenario presents a function designed to fetch, process, visualise,
+and predict population and crime data for local government areas (LGAs)
+in the state of Victoria, Australia. The function provides an
+interactive map displaying the selected LGAs, their population figures,
+and crime counts for a specified year. When the specified year is in the
+future, between 2024 and 2031, it will present the predicted population
+and crime counts. The predicted population is provided by
+Victoria\textquotesingle s own projections, while the predicted crime
+counts are estimated using a polynomial regression model trained on data
+from 2019 to 2024 for each selected LGA.
+
+There are two main reasons for choosing the polynomial regression model.
+Firstly, the training data is limited since the scope narrows down to
+specific LGAs, and a polynomial regression model of degree 2 is simple
+enough to avoid overfitting the data. Secondly, as demonstrated in sub
+scenario 1, the polynomial regression model performs well in predicting
+crime counts for various crime subdivisions.
+
+Two important packages are used for building the map: folium and
+Nominatim from geopy.geocoders. The folium package helps build the
+interactive user interface, providing clickable tabs with popup text
+displayed on OpenStreetMap. The Nominatim package assists in finding the
+geographic locations for each selected LGA, enabling the accurate
+placement of tabs on the map.
+
+The figure below illustrates an example of using this function. The user
+first entered "Melbourne" and "Alpine" as the LGA names and then
+selected 2028 as the specified year. By clicking the tab for Melbourne,
+the map displays an estimated population of 206,164 and an estimated
+crime count of 22,792.
+
+\hypertarget{sub-scenario-3-the-visualisation-of-south-australia-crime-count-against-month-and-the-prediction-of-population-based-on-crime}{%
+\paragraph{\texorpdfstring{\textbf{Sub Scenario 3}: The Visualisation of
+South Australia Crime Count Against Month and the prediction of
+Population based on
+Crime}{Sub Scenario 3: The Visualisation of South Australia Crime Count Against Month and the prediction of Population based on Crime}}\label{sub-scenario-3-the-visualisation-of-south-australia-crime-count-against-month-and-the-prediction-of-population-based-on-crime}}
+
+The primary objective of this sub-scenario is to visualise the
+historical crime data of South Australia and predict its population
+based on this data using various regression models, including Polynomial
+Regression, Linear Regression, and Random Forest Regression, trained on
+the population and crime data of Victoria state.
+
+There are two stages in this sub-scenario. The first stage involves data
+visualisation conducted using PyGWalker to generate a visual
+representation of the South Australia crime data over months from the
+years 2019 to 2023. The functional purpose of this visualisation is to
+showcase the robust interactive user interface provided by the PyGWalker
+package, which allows users to freely drag and choose what data to
+include in the graph and add filters to compare different data groups.
+For demonstration, we set the x-axis to be the month, the y-axis to be
+the crime count, and the filter to be the year to observe how crime
+counts vary at different times of the year for each year. The optimal
+view of this graph includes data for up to three years, so we present
+the years to include 2019, 2020, and 2022:
+
+The next phase involves model building and training. Crime count and
+population data for Victoria are combined, and offence counts are summed
+by year. This grouped data creates the feature (X) and target (y)
+variables for model training. Three models are trained: a Polynomial
+Regression model using a pipeline with polynomial features of degree 2,
+a Random Forest Regression model with 100 estimators, and a simple
+Linear Regression model. Using these trained models, predictions are
+made based on yearly crime counts from the South Australia dataset in
+the below table:
+
+After comparing the different regression models, we observe that the
+Polynomial Regression model produces negative predictions and the Random
+Forest model yields unchanged predictions for each year. Therefore, we
+focus on visualising the predictions of the Linear Regression model as
+the above right figure shows. The final plot illustrates the predicted
+population over the years, providing insights into the potential
+influence of crime rates on population estimates.
+
+\hypertarget{section-2}{%
+\subsubsection{}\label{section-2}}
+
+\hypertarget{section-3}{%
+\subsubsection{}\label{section-3}}
+
+\hypertarget{testing-1}{%
+\subsubsection{\texorpdfstring{\textbf{Testing}}{Testing}}\label{testing-1}}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1200}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.3367}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1283}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2717}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1433}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+Test Case Number
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Test Case Function
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Test Case Port
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Router
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Successful/not
+\end{minipage} \\
+\begin{minipage}[b]{\linewidth}\raggedright
+1
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+get\_vicpop\_data
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+9030
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+search-vic-population
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+yes
+\end{minipage} \\
+\begin{minipage}[b]{\linewidth}\raggedright
+2
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+get\_subcrimecount\_data
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+9030
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+search-vic-crime-by-offence-count
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+yes
+\end{minipage} \\
+\begin{minipage}[b]{\linewidth}\raggedright
+3
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+get\_viccrimegov\_data
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+9030
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+search-vic-crimegov
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+yes
+\end{minipage} \\
+\begin{minipage}[b]{\linewidth}\raggedright
+4
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+get\_southaus\_data
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+9030
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+search-south-crimegov
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+yes
+\end{minipage} \\
+\midrule()
+\endhead
+\bottomrule()
+\end{longtable}
+
+\hypertarget{challenges}{%
+\subsubsection{\texorpdfstring{\textbf{Challenges}}{Challenges}}\label{challenges}}
+
+\begin{itemize}
+\item
+  \begin{quote}
+  In sub scenario 2, we wanted to be able to show all possible locations
+  of LGA recorded in the data and this requires us to have all the
+  coordinate points or geometry columns of the data. However, we don't
+  have them in the data, so we turned out to use the Nominatim to
+  transform the name of LGA to coordinate points instead.
+  \end{quote}
+\item
+  \begin{quote}
+  During sub scenario 3, we had a problem fixing the PygWalker graph
+  axis with the variables that we want to show that users are all on
+  their own left with the blank interface. At the same time, we also had
+  problems managing the style of the graph presented. We then found out
+  the function for copying the code of fixed graph generation.
+  \end{quote}
+\item
+  \begin{quote}
+  In both sub scenarios 2 and 3, when training the models, we faced the
+  problem of training data too small. We tried to solve the problem by
+  adjusting the best model to deal with each identical training set.
+  \end{quote}
+\end{itemize}
+
+\hypertarget{improvements}{%
+\subsubsection{\texorpdfstring{\textbf{Improvements}}{Improvements}}\label{improvements}}
+
+There are three parts we can improve for this scenario.
+
+\begin{itemize}
+\item
+  \begin{quote}
+  The prediction for crime subdivision
+  \end{quote}
+\end{itemize}
+
+\begin{quote}
+In the sub scenario 1, if we have more time, we can also make prediction
+and visualisation of the future crime counts for each crime subdivision.
+\end{quote}
+
+\begin{itemize}
+\item
+  \begin{quote}
+  The styling of PyGWalker
+  \end{quote}
+\end{itemize}
+
+\begin{quote}
+For the colour, opacity, and legend of the PyGWalker, there are still
+some problems occurring if we changed the filter, like the colours and
+opacity might change to an ugly combination and the legend might happen
+to be in a weird format.
+\end{quote}
+
+\begin{itemize}
+\item
+  \begin{quote}
+  The OpenStreetMap. In the map of scenario 2, sometimes the user needs
+  to open a website nominatim.openstreetmap.org in their browser to be
+  able to access the map. However, for some Mac users, even if they
+  opened the website in the browser, there is still a chance to fail to
+  access the map. c
+  \end{quote}
+\item
+  \begin{quote}
+  The size of training set
+  \end{quote}
+\end{itemize}
+
+\begin{quote}
+Both training sets in sub section 2 and 3 are too small. If we increase
+the training set, the precision of the predicted data will be largely
+increased.
+\end{quote}
+
+\hypertarget{vic-crime-heatmap}{%
+\subsection{3.4 Vic Crime Heatmap}\label{vic-crime-heatmap}}
+
+The heat map for crimes in subs of Victoria is produced by tableau.
+Because the visualisation effect of tableau is better than that of
+python code. We plan to upload the data to elastic search and then call
+the data to visualise it in Tableau. At the beginning, the data could
+not be uploaded to elastic search normally, and elastic search showed
+that there were many garbled characters in the data. But when viewing
+the CSV file locally, these garbled characters did not exist. We chose
+to use UTF-16 encoding to read the file and clean up the invisible
+characters inside. From the cleaned file content, it can be seen that
+the CSV file still has issues and the file content has not been properly
+parsed. The current file may be a string merged in one column instead of
+being split in the expected multi column format. We split the content of
+each row to ensure that each field is processed correctly. From the
+sample line content, the file uses a tab (\textbackslash t) as a
+delimiter instead of a comma. We can use tabs as delimiters to reread
+the file content and parse the data. The file content has been
+successfully parsed and correctly displayed as multiple rows and
+columns.
+
+There is a simple way to use a tableau connector for elastic search
+published by elastic search.
+(\href{https://www.elastic.co/cn/downloads/tableau-connector}{\uline{https://www.elastic.co/cn/downloads/tableau-connector}})
+But the JDBC driver requires a platinum elastic search subscription, so
+we had to find another way. We chose to use an elastic search web data
+connector and configured relevant HTML and Java script files. After the
+connection is successfully established, we can directly obtain data for
+tableau. Meanwhile, since Tableau only needs to upload data once, the
+data related to this heat map in elastic search will become the cold
+index. After visualising the content on Tableau, we embed the chart
+using HTML methods.
+
+3.4.1 Improvements
+
+As mentioned, there is a simple way to use a tableau connector for
+elastic search published by elastic search if we subscribe to a platinum
+elastic search subscription. There is another way, to connect elastic
+search data to tableau server. But tableau server is only used by
+companies or organisations, we do not have the access to create a
+tableau server. If we have one of the above permissions, this part can
+be greatly simplified.
+
+\hypertarget{conclusion}{%
+\section{4. Conclusion}\label{conclusion}}
+
+The implementation of our system on the Melbourne Research Cloud has
+demonstrated the significant advantages of using cloud-based
+infrastructure for data analytics projects. Despite some challenges with
+availability and VPN access, the MRC provided a cost-effective, secure,
+and convenient platform for deploying our project. Utilising Kubernetes
+for container orchestration, Elasticsearch for data indexing and
+retrieval, and Fission for serverless function management, we achieved a
+scalable and efficient system capable of processing large datasets in
+real-time.
+
+Our analysis scenarios, which explored the relationship between public
+sentiment and crime perception through Twitter and Mastodon data, as
+well as the correlation between crime rates and population statistics,
+highlighted the power of integrating diverse data sources and advanced
+analytics tools. The insights gained from these scenarios can inform
+public policy, enhance community safety strategies, and contribute to a
+deeper understanding of social dynamics.
+
+In conclusion, the successful deployment and analysis underscore the
+value of cloud-based infrastructure and advanced data analytics in
+addressing complex social issues. Future improvements could include
+expanding the training datasets for better prediction accuracy,
+enhancing data visualisation techniques, and further automating data
+processing workflows to handle even larger datasets with greater
+precision.
+
+\hypertarget{appendix}{%
+\section{Appendix}\label{appendix}}
+
+2.1
+
+\includegraphics[width=5.78802in,height=2.24085in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image6.png}
+
+2.2.2
+
+\includegraphics[width=6.26772in,height=0.88889in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image8.png}
+
+\includegraphics[width=5.95287in,height=2.73107in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image21.png}
+
+\#\#\# 2.3
+
+\includegraphics[width=3.04109in,height=2.63813in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image30.png}\includegraphics[width=2.40848in,height=2.69521in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image28.png}
+
+\includegraphics[width=6.26772in,height=0.30556in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image17.png}\includegraphics[width=6.26772in,height=0.69444in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image26.png}
+
+\includegraphics[width=2.03125in,height=2.32292in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image35.png}\includegraphics[width=3.625in,height=2.32292in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image22.png}
+
+\includegraphics[width=6.26772in,height=0.5in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image23.png}
+
+\includegraphics[width=2.27277in,height=2.73882in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image3.png}.\includegraphics[width=3.26814in,height=1.69158in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image14.png}
+
+\includegraphics[width=6.26772in,height=0.25in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image42.png}
+
+\includegraphics[width=4.27604in,height=2.19741in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image24.png}
+
+\includegraphics[width=6.26772in,height=0.5in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image23.png}
+
+\includegraphics[width=4.36458in,height=2.53125in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image34.png}\includegraphics[width=4.58333in,height=1.10417in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image39.png}
+
+\includegraphics[width=6.26772in,height=0.44444in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image19.png}
+
+\includegraphics[width=4.42708in,height=0.75in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image2.png}
+
+\includegraphics[width=6.26772in,height=2.41667in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image50.png}
+
+\includegraphics[width=3.35417in,height=0.36458in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image41.png}\includegraphics[width=6.26772in,height=0.16667in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image47.png}\includegraphics[width=4.30208in,height=0.22917in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image1.png}
+
+\includegraphics[width=6.26772in,height=0.48611in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image10.png}
+
+\includegraphics[width=3.29167in,height=0.33333in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image29.png}
+
+\includegraphics[width=6.26772in,height=0.48611in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image40.png}\includegraphics[width=6.26772in,height=1.58333in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image53.png}
+
+\includegraphics[width=4.60417in,height=1.66667in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image20.png}
+
+\includegraphics[width=6.26772in,height=0.58333in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image25.png}
+
+\includegraphics[width=2.92476in,height=2.94271in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image44.png}
+
+\includegraphics[width=4.85938in,height=2.46198in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image46.png}
+
+\includegraphics[width=6.26772in,height=2.13889in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image48.png}
+
+\includegraphics[width=6.26772in,height=3.20833in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image12.png}
+
+2.4.1
+
+\includegraphics[width=5.81771in,height=3.45004in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image38.png}
+
+3.1.1
+
+\includegraphics[width=3.26563in,height=1.07932in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image36.png}
+
+3.1.2
+
+\includegraphics[width=4.59896in,height=2.80894in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image27.png}
+
+3.1.3
+
+\includegraphics[width=6.125in,height=0.20833in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image5.png}
+
+\includegraphics[width=5.26458in,height=0.84761in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image5.png}
+
+3.1.4
+
+\includegraphics[width=4.96458in,height=0.341in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image15.png}
+
+\includegraphics[width=4.96458in,height=1.88379in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image15.png}
+
+3.1.5
+
+\includegraphics[width=3.16146in,height=3.2887in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image31.png}
+
+3.1.6
+
+\includegraphics[width=4.10938in,height=0.8877in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image16.png}
+
+3.2.1
+
+\includegraphics[width=4.30885in,height=2.44168in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image52.png}
+
+\textbf{3.2.2}
+
+\includegraphics[width=4.32968in,height=2.79907in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image45.png}
+
+3.2.3
+
+\includegraphics[width=4.7776in,height=2.986in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image51.png}
+
+3.2.4
+
+\includegraphics[width=4.40916in,height=2.18613in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image54.png}
+
+\textbf{3.3}
+
+\includegraphics[width=6.26772in,height=2.15278in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image13.png}
+
+\textbf{3.3.1}
+
+\includegraphics[width=2.75249in,height=1.82088in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image9.png}\includegraphics[width=2.62531in,height=1.73338in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image4.png}
+
+3.3.2
+
+\includegraphics[width=4.35364in,height=2.95754in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image32.png}
+
+3.3.3
+
+\includegraphics[width=3.87343in,height=3.2265in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image33.png}
+
+3.3.4\includegraphics[width=3.10573in,height=1.97537in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image11.png}
+
+\includegraphics[width=2.23073in,height=2.00457in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image18.png}
+
+3.3.5
+
+\includegraphics[width=6.26772in,height=2.08333in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image43.png}
+
+3.4
+
+\includegraphics[width=2.76458in,height=1.34308in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image7.png}
+
+\includegraphics[width=3.67292in,height=2.73065in]{vertopal_08a0af2dc8264a4b885d97f610b75e73/media/image55.png}
+
+\end{document}

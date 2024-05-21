@@ -1,0 +1,21 @@
+{
+    "daily_tweets": {
+      "mappings": {
+        "_meta": {
+          "created_by": "file-data-visualizer"
+        },
+        "properties": {
+          "@timestamp": {
+            "type": "date"
+          },
+          "Date": {
+            "type": "date",
+            "format": "epoch_millis"
+          },
+          "Number of Tweets": {
+            "type": "long"
+          }
+        }
+      }
+    }
+}
