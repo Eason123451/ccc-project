@@ -63,7 +63,7 @@ To start the Jupyter Notebook, activate your environment and run:
 
 jupyter notebook
 
-Notice that `presentation.ipynb` is the interface and other python files are helper functions for encapsulation.
+Notice that `presentation.ipynb` under `Frontend` folder is the interface and other python files are helper functions for encapsulation.
 
 
 ### Submission Details
