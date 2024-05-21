@@ -80,3 +80,7 @@ Notice that `presentation.ipynb` is the interface and other python files are hel
 - `Doc/ -- Documentation about backend function descriptions and routes descriptions and report`
 - `Test/ -- Testing codes for backend`
 - `Database/ -- Json files for ElasticSearch mapping and settings`
+
+
+### System architecture
+The system architecture designed for this project is deployed on the University of Melbourne Research Cloud. Use Fission as backend. Use k8s for cluster management. For further information, please refer to the project report attached to this submission.
