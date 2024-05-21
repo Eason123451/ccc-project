@@ -6,4 +6,4 @@ def get_mastodon_data(port):
     return response.json()
 
 
-print(get_mastodon_data(9030))
+print(get_mastodon_data(9090))
