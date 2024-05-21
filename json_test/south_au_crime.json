@@ -1,0 +1,302 @@
+[
+  {
+    "@timestamp": "2019-01-01T00:00:00.000+11:00",
+    "Sum of Offence count": "9,005",
+    "Reported Date per month": "2019-01-01"
+  },
+  {
+    "@timestamp": "2019-02-01T00:00:00.000+11:00",
+    "Sum of Offence count": "8,661",
+    "Reported Date per month": "2019-02-01"
+  },
+  {
+    "@timestamp": "2019-03-01T00:00:00.000+11:00",
+    "Sum of Offence count": "9,466",
+    "Reported Date per month": "2019-03-01"
+  },
+  {
+    "@timestamp": "2019-04-01T00:00:00.000+11:00",
+    "Sum of Offence count": "8,824",
+    "Reported Date per month": "2019-04-01"
+  },
+  {
+    "@timestamp": "2019-05-01T00:00:00.000+10:00",
+    "Sum of Offence count": "9,551",
+    "Reported Date per month": "2019-05-01"
+  },
+  {
+    "@timestamp": "2019-06-01T00:00:00.000+10:00",
+    "Sum of Offence count": "9,483",
+    "Reported Date per month": "2019-06-01"
+  },
+  {
+    "@timestamp": "2019-07-01T00:00:00.000+10:00",
+    "Sum of Offence count": "9,649",
+    "Reported Date per month": "2019-07-01"
+  },
+  {
+    "@timestamp": "2019-08-01T00:00:00.000+10:00",
+    "Sum of Offence count": "9,746",
+    "Reported Date per month": "2019-08-01"
+  },
+  {
+    "@timestamp": "2019-09-01T00:00:00.000+10:00",
+    "Sum of Offence count": "9,881",
+    "Reported Date per month": "2019-09-01"
+  },
+  {
+    "@timestamp": "2019-10-01T00:00:00.000+10:00",
+    "Sum of Offence count": "10,591",
+    "Reported Date per month": "2019-10-01"
+  },
+  {
+    "@timestamp": "2019-11-01T00:00:00.000+11:00",
+    "Sum of Offence count": "10,044",
+    "Reported Date per month": "2019-11-01"
+  },
+  {
+    "@timestamp": "2019-12-01T00:00:00.000+11:00",
+    "Sum of Offence count": "10,722",
+    "Reported Date per month": "2019-12-01"
+  },
+  {
+    "@timestamp": "2020-01-01T00:00:00.000+11:00",
+    "Sum of Offence count": "11,196",
+    "Reported Date per month": "2020-01-01"
+  },
+  {
+    "@timestamp": "2020-02-01T00:00:00.000+11:00",
+    "Sum of Offence count": "10,528",
+    "Reported Date per month": "2020-02-01"
+  },
+  {
+    "@timestamp": "2020-03-01T00:00:00.000+11:00",
+    "Sum of Offence count": "10,183",
+    "Reported Date per month": "2020-03-01"
+  },
+  {
+    "@timestamp": "2020-04-01T00:00:00.000+11:00",
+    "Sum of Offence count": "7,146",
+    "Reported Date per month": "2020-04-01"
+  },
+  {
+    "@timestamp": "2020-05-01T00:00:00.000+10:00",
+    "Sum of Offence count": "6,779",
+    "Reported Date per month": "2020-05-01"
+  },
+  {
+    "@timestamp": "2020-06-01T00:00:00.000+10:00",
+    "Sum of Offence count": "6,725",
+    "Reported Date per month": "2020-06-01"
+  },
+  {
+    "@timestamp": "2020-07-01T00:00:00.000+10:00",
+    "Sum of Offence count": "6,992",
+    "Reported Date per month": "2020-07-01"
+  },
+  {
+    "@timestamp": "2020-08-01T00:00:00.000+10:00",
+    "Sum of Offence count": "7,696",
+    "Reported Date per month": "2020-08-01"
+  },
+  {
+    "@timestamp": "2020-09-01T00:00:00.000+10:00",
+    "Sum of Offence count": "7,972",
+    "Reported Date per month": "2020-09-01"
+  },
+  {
+    "@timestamp": "2020-10-01T00:00:00.000+10:00",
+    "Sum of Offence count": "8,443",
+    "Reported Date per month": "2020-10-01"
+  },
+  {
+    "@timestamp": "2020-11-01T00:00:00.000+11:00",
+    "Sum of Offence count": "7,919",
+    "Reported Date per month": "2020-11-01"
+  },
+  {
+    "@timestamp": "2020-12-01T00:00:00.000+11:00",
+    "Sum of Offence count": "8,509",
+    "Reported Date per month": "2020-12-01"
+  },
+  {
+    "@timestamp": "2021-01-01T00:00:00.000+11:00",
+    "Sum of Offence count": "8,523",
+    "Reported Date per month": "2021-01-01"
+  },
+  {
+    "@timestamp": "2021-02-01T00:00:00.000+11:00",
+    "Sum of Offence count": "8,035",
+    "Reported Date per month": "2021-02-01"
+  },
+  {
+    "@timestamp": "2021-03-01T00:00:00.000+11:00",
+    "Sum of Offence count": "8,860",
+    "Reported Date per month": "2021-03-01"
+  },
+  {
+    "@timestamp": "2021-04-01T00:00:00.000+11:00",
+    "Sum of Offence count": "8,632",
+    "Reported Date per month": "2021-04-01"
+  },
+  {
+    "@timestamp": "2021-05-01T00:00:00.000+10:00",
+    "Sum of Offence count": "8,919",
+    "Reported Date per month": "2021-05-01"
+  },
+  {
+    "@timestamp": "2021-06-01T00:00:00.000+10:00",
+    "Sum of Offence count": "8,600",
+    "Reported Date per month": "2021-06-01"
+  },
+  {
+    "@timestamp": "2021-07-01T00:00:00.000+10:00",
+    "Sum of Offence count": "8,134",
+    "Reported Date per month": "2021-07-01"
+  },
+  {
+    "@timestamp": "2021-08-01T00:00:00.000+10:00",
+    "Sum of Offence count": "8,993",
+    "Reported Date per month": "2021-08-01"
+  },
+  {
+    "@timestamp": "2021-09-01T00:00:00.000+10:00",
+    "Sum of Offence count": "9,048",
+    "Reported Date per month": "2021-09-01"
+  },
+  {
+    "@timestamp": "2021-10-01T00:00:00.000+10:00",
+    "Sum of Offence count": "9,280",
+    "Reported Date per month": "2021-10-01"
+  },
+  {
+    "@timestamp": "2021-11-01T00:00:00.000+11:00",
+    "Sum of Offence count": "9,332",
+    "Reported Date per month": "2021-11-01"
+  },
+  {
+    "@timestamp": "2021-12-01T00:00:00.000+11:00",
+    "Sum of Offence count": "9,246",
+    "Reported Date per month": "2021-12-01"
+  },
+  {
+    "@timestamp": "2022-01-01T00:00:00.000+11:00",
+    "Sum of Offence count": "9,021",
+    "Reported Date per month": "2022-01-01"
+  },
+  {
+    "@timestamp": "2022-02-01T00:00:00.000+11:00",
+    "Sum of Offence count": "8,639",
+    "Reported Date per month": "2022-02-01"
+  },
+  {
+    "@timestamp": "2022-03-01T00:00:00.000+11:00",
+    "Sum of Offence count": "9,533",
+    "Reported Date per month": "2022-03-01"
+  },
+  {
+    "@timestamp": "2022-04-01T00:00:00.000+11:00",
+    "Sum of Offence count": "8,431",
+    "Reported Date per month": "2022-04-01"
+  },
+  {
+    "@timestamp": "2022-05-01T00:00:00.000+10:00",
+    "Sum of Offence count": "8,991",
+    "Reported Date per month": "2022-05-01"
+  },
+  {
+    "@timestamp": "2022-06-01T00:00:00.000+10:00",
+    "Sum of Offence count": "8,768",
+    "Reported Date per month": "2022-06-01"
+  },
+  {
+    "@timestamp": "2022-07-01T00:00:00.000+10:00",
+    "Sum of Offence count": "8,914",
+    "Reported Date per month": "2022-07-01"
+  },
+  {
+    "@timestamp": "2022-08-01T00:00:00.000+10:00",
+    "Sum of Offence count": "9,235",
+    "Reported Date per month": "2022-08-01"
+  },
+  {
+    "@timestamp": "2022-09-01T00:00:00.000+10:00",
+    "Sum of Offence count": "8,886",
+    "Reported Date per month": "2022-09-01"
+  },
+  {
+    "@timestamp": "2022-10-01T00:00:00.000+10:00",
+    "Sum of Offence count": "9,865",
+    "Reported Date per month": "2022-10-01"
+  },
+  {
+    "@timestamp": "2022-11-01T00:00:00.000+11:00",
+    "Sum of Offence count": "9,751",
+    "Reported Date per month": "2022-11-01"
+  },
+  {
+    "@timestamp": "2022-12-01T00:00:00.000+11:00",
+    "Sum of Offence count": "9,666",
+    "Reported Date per month": "2022-12-01"
+  },
+  {
+    "@timestamp": "2023-01-01T00:00:00.000+11:00",
+    "Sum of Offence count": "10,534",
+    "Reported Date per month": "2023-01-01"
+  },
+  {
+    "@timestamp": "2023-02-01T00:00:00.000+11:00",
+    "Sum of Offence count": "9,563",
+    "Reported Date per month": "2023-02-01"
+  },
+  {
+    "@timestamp": "2023-03-01T00:00:00.000+11:00",
+    "Sum of Offence count": "10,515",
+    "Reported Date per month": "2023-03-01"
+  },
+  {
+    "@timestamp": "2023-04-01T00:00:00.000+11:00",
+    "Sum of Offence count": "9,824",
+    "Reported Date per month": "2023-04-01"
+  },
+  {
+    "@timestamp": "2023-05-01T00:00:00.000+10:00",
+    "Sum of Offence count": "10,421",
+    "Reported Date per month": "2023-05-01"
+  },
+  {
+    "@timestamp": "2023-06-01T00:00:00.000+10:00",
+    "Sum of Offence count": "9,605",
+    "Reported Date per month": "2023-06-01"
+  },
+  {
+    "@timestamp": "2023-07-01T00:00:00.000+10:00",
+    "Sum of Offence count": "9,671",
+    "Reported Date per month": "2023-07-01"
+  },
+  {
+    "@timestamp": "2023-08-01T00:00:00.000+10:00",
+    "Sum of Offence count": "10,346",
+    "Reported Date per month": "2023-08-01"
+  },
+  {
+    "@timestamp": "2023-09-01T00:00:00.000+10:00",
+    "Sum of Offence count": "9,944",
+    "Reported Date per month": "2023-09-01"
+  },
+  {
+    "@timestamp": "2023-10-01T00:00:00.000+10:00",
+    "Sum of Offence count": "10,079",
+    "Reported Date per month": "2023-10-01"
+  },
+  {
+    "@timestamp": "2023-11-01T00:00:00.000+11:00",
+    "Sum of Offence count": "10,152",
+    "Reported Date per month": "2023-11-01"
+  },
+  {
+    "@timestamp": "2023-12-01T00:00:00.000+11:00",
+    "Sum of Offence count": "10,582",
+    "Reported Date per month": "2023-12-01"
+  }
+]
