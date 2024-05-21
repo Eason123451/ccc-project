@@ -1,0 +1,22 @@
+apiVersion: fission.io/v1
+kind: HTTPTrigger
+metadata:
+  creationTimestamp: null
+  name: search-viccrime-for-twitter
+spec:
+  createingress: true
+  functionref:
+    functionweights: null
+    name: search-viccrime-for-twitter
+    type: name
+  host: ""
+  ingressconfig:
+    annotations: null
+    host: '*'
+    path: /search-viccrime-for-twitter
+    tls: ""
+  method: ""
+  methods:
+  - GET
+  prefix: ""
+  relativeurl: /search-viccrime-for-twitter
