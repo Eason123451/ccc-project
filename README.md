@@ -1,5 +1,16 @@
 # Project Documentation for Twitter Sentiment Analysis
 
+## Required Packages
+- **pandas**
+- **matplotlib**
+- **seaborn**
+- **numpy**
+- **scipy**
+- **ipython**
+- **requests**
+- **unittest**
+  
+
 ## Data Preparation
 
 ### Tweets Data Files
@@ -57,7 +68,7 @@ This analysis compares the distribution of sentiment scores on the busiest and q
 - **Comparison**: The curves and histograms allow for a visual comparison of sentiment trends between the two types of days.
 
 #### Insights
-- **Distribution Shape**: Both days exhibit roughly normal distributions, but the busiest day shows a slightly more positive skew compared to the quietest day.
+- **Distribution Shape**: Both days exhibit roughly normal distributions, but the quietest shows a slightly more positive skew compared to the busiest day.
 - **Sentiment Variability**: The busiest days tend to have a broader spread of sentiment scores, suggesting more varied reactions among tweets compared to quieter days.
 
 #### Conclusion
